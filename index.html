@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- ═══ PRIMARY SEO ═══ -->
+  <title>Nature's Nest – Fresh Organic Fruits &amp; Vegetables | Gujarat, India</title>
+  <meta name="description" content="Nature's Nest produces 100% organic, chemical-free exotic fruits (Dragon Fruit, Guava, Sitafal, Mango) and fresh vegetables in Gujarat. Order via WhatsApp or call +91 8320852144." />
+  <meta name="keywords" content="organic fruits, organic vegetables, dragon fruit Gujarat, guava farm, sitafal custard apple, organic farm India, fresh vegetables Gujarat, nature's nest farm" />
+  <meta name="author" content="Nature's Nest Organic Farm" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="index.html" />
+
+  <!-- ═══ OPEN GRAPH (WhatsApp / Social Media Previews) ═══ -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Nature's Nest – 100% Organic Fruits &amp; Vegetables, Gujarat" />
+  <meta property="og:description" content="Farm-fresh exotic fruits like Dragon Fruit, Guava, Sitafal and organic vegetables. No pesticides, delivered fresh. Call/WhatsApp: +91 8320852144" />
+  <meta property="og:image" content="images/hero_banner.png" />
+  <meta property="og:site_name" content="Nature's Nest Organic Farm" />
+
+  <!-- ═══ TWITTER CARD ═══ -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Nature's Nest – Fresh Organic Produce, Gujarat" />
+  <meta name="twitter:description" content="100% organic farm-fresh fruits and vegetables. Order on WhatsApp: +91 8320852144" />
+  <meta name="twitter:image" content="images/hero_banner.png" />
+
+  <!-- ═══ STRUCTURED DATA (Schema.org JSON-LD) ═══ -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Nature's Nest Organic Farm",
+    "description": "100% organic farm growing exotic fruits like Dragon Fruit, Guava, Sitafal and fresh vegetables in Gujarat, India.",
+    "telephone": "+918320852144",
+    "address": {
+      "@type": "PostalAddress",
+      "addressRegion": "Gujarat",
+      "addressCountry": "IN"
+    },
+    "openingHours": "Mo-Sa 07:00-19:00",
+    "priceRange": "₹₹",
+    "servesCuisine": "Organic Produce",
+    "url": "index.html",
+    "sameAs": ["https://wa.me/918320852144"]
+  }
+  </script>
+
+  <!-- ═══ GOOGLE FONTS ═══ -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,800;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- ═══ FONTAWESOME 6 ═══ -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+  <!-- ═══ STYLESHEETS ═══ -->
+  <link rel="stylesheet" href="css/shared.css" />
+  <link rel="stylesheet" href="css/home.css" />
+</head>
+<body>
+
+  <!-- ══ PAGE LOADER ══ -->
+  <div class="page-loader" id="page-loader">
+    <div class="loader-inner">
+      <div class="loader-icon"><i class="fa-solid fa-leaf"></i></div>
+      <div class="loader-bar"><div class="loader-fill"></div></div>
+      <span>Cultivating 100% Organic Goodness...</span>
+    </div>
+  </div>
+
+  <!-- ══ SCROLL PROGRESS BAR ══ -->
+  <div class="scroll-progress" id="scroll-progress"></div>
+
+  <!-- ══ FLOATING QUICK-CONTACT BUTTONS ══ -->
+  <div class="floating-buttons">
+    <a href="https://wa.me/918320852144?text=Hello!%20I%20would%20like%20to%20order%20organic%20fruits%20and%20vegetables%20from%20Nature's%20Nest." 
+       class="fab-btn whatsapp-btn" id="whatsapp-float" target="_blank" rel="noopener" aria-label="Order on WhatsApp">
+      <i class="fa-brands fa-whatsapp"></i>
+      <span class="fab-label">WhatsApp</span>
+    </a>
+    <a href="tel:+918320852144" class="fab-btn call-btn" id="call-float" aria-label="Call +91 8320852144">
+      <i class="fa-solid fa-phone"></i>
+      <span class="fab-label">Call Now</span>
+    </a>
+  </div>
+
+  <!-- ══ MAIN NAVIGATION ══ -->
+  <header class="header" id="header">
+    <div class="nav-container">
+      <a href="index.html" class="logo" aria-label="Nature's Nest Home">
+        <div class="logo-icon-wrap">
+          <i class="fa-solid fa-seedling"></i>
+        </div>
+        <div class="logo-words">
+          <span class="logo-name">Nature's Nest</span>
+          <span class="logo-sub">Organic Farm Fresh</span>
+        </div>
+      </a>
+
+      <nav class="nav-links" id="nav-links" aria-label="Main navigation">
+        <a href="index.html" class="nav-link active" id="nl-home"><i class="fa-solid fa-house"></i> Home</a>
+        <a href="fruits.html" class="nav-link" id="nl-fruits"><i class="fa-solid fa-apple-whole"></i> Fruits</a>
+        <a href="vegetables.html" class="nav-link" id="nl-veg"><i class="fa-solid fa-carrot"></i> Vegetables</a>
+        <a href="#about" class="nav-link" id="nl-about"><i class="fa-solid fa-circle-info"></i> Our Story</a>
+        <a href="#contact" class="nav-link" id="nl-contact"><i class="fa-solid fa-map-location-dot"></i> Visit Us</a>
+        <a href="tel:+918320852144" class="nav-cta" id="nl-call">
+          <i class="fa-solid fa-phone"></i> +91 83208 52144
+        </a>
+      </nav>
+
+      <button class="hamburger" id="hamburger" aria-label="Toggle navigation menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ══ HERO SECTION ══ -->
+  <section class="hero" id="home" aria-label="Nature's Nest Hero">
+    <div class="hero-bg">
+      <img src="images/hero_banner.png" alt="Nature's Nest Organic Farm lush landscape in Gujarat" class="hero-img" fetchpriority="high" />
+      <div class="hero-overlay"></div>
+    </div>
+    <canvas id="particle-canvas" class="particle-canvas" aria-hidden="true"></canvas>
+
+    <div class="hero-content">
+      <div class="hero-pill hero-anim" style="--d: 0.1s">
+        <span class="pill-dot"></span>
+        <i class="fa-solid fa-certificate"></i> 100% Certified Organic Farm &bull; Gujarat, India
+      </div>
+
+      <h1 class="hero-title hero-anim" style="--d: 0.25s">
+        Pure Earth. Pure Taste.<br />
+        <span class="hero-title-accent">Organic Produce</span> Delivered Fresh
+      </h1>
+
+      <p class="hero-sub hero-anim" style="--d: 0.4s">
+        Cultivated naturally without synthetic chemicals, pesticides, or artificial ripening agents. 
+        Experience sweet Guavas, exotic Dragon Fruit, velvety Sitafal, and morning-harvested crisp vegetables straight from our fields.
+      </p>
+
+      <div class="hero-btns hero-anim" style="--d: 0.55s">
+        <a href="fruits.html" class="btn btn-primary btn-xl" id="hero-btn-fruits">
+          <i class="fa-solid fa-apple-whole"></i> Explore Fruits
+        </a>
+        <a href="vegetables.html" class="btn btn-green-outline btn-xl" id="hero-btn-veg">
+          <i class="fa-solid fa-carrot"></i> Explore Vegetables
+        </a>
+        <a href="https://wa.me/918320852144?text=Hi!%20I%20would%20like%20to%20order%20farm-fresh%20organic%20produce."
+           class="btn btn-whatsapp btn-xl" target="_blank" rel="noopener" id="hero-btn-wa">
+          <i class="fa-brands fa-whatsapp"></i> Quick Order
+        </a>
+      </div>
+
+      <div class="hero-stats hero-anim" style="--d: 0.7s">
+        <div class="hstat">
+          <span class="hstat-n" data-target="100">0</span><span class="hstat-s">%</span>
+          <span class="hstat-l">Organic Certified</span>
+        </div>
+        <div class="hstat-sep"></div>
+        <div class="hstat">
+          <span class="hstat-n" data-target="20">0</span><span class="hstat-s">+</span>
+          <span class="hstat-l">Produce Varieties</span>
+        </div>
+        <div class="hstat-sep"></div>
+        <div class="hstat">
+          <span class="hstat-n" data-target="0">0</span><span class="hstat-s"></span>
+          <span class="hstat-l">Chemical Sprays</span>
+        </div>
+        <div class="hstat-sep"></div>
+        <div class="hstat">
+          <span class="hstat-n" data-target="24">0</span><span class="hstat-s">h</span>
+          <span class="hstat-l">Farm to Table</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="scroll-hint" aria-hidden="true">
+      <span class="scroll-hint-text">Scroll to explore</span>
+      <i class="fa-solid fa-chevron-down"></i>
+    </div>
+  </section>
+
+  <!-- ══ TRUST VALUES BAR ══ -->
+  <section class="trust-bar" aria-label="Trust and Quality Badges">
+    <div class="container">
+      <div class="trust-row">
+        <div class="trust-chip">
+          <span class="tc-icon"><i class="fa-solid fa-seedling"></i></span>
+          <span><b>Zero</b> Chemical Pesticides</span>
+        </div>
+        <div class="trust-sep"></div>
+        <div class="trust-chip">
+          <span class="tc-icon"><i class="fa-solid fa-tractor"></i></span>
+          <span><b>100%</b> Direct Farm Origin</span>
+        </div>
+        <div class="trust-sep"></div>
+        <div class="trust-chip">
+          <span class="tc-icon"><i class="fa-solid fa-sun"></i></span>
+          <span><b>Daily</b> Morning Harvest</span>
+        </div>
+        <div class="trust-sep"></div>
+        <div class="trust-chip">
+          <span class="tc-icon"><i class="fa-solid fa-location-dot"></i></span>
+          <span><b>Local</b> Gujarat Produce</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ CATEGORIES SHOWCASE ══ -->
+  <section class="categories-section" id="categories" aria-label="Product Categories">
+    <div class="container">
+      <div class="section-head reveal-up">
+        <span class="section-pill"><i class="fa-solid fa-layer-group"></i> Farm Fresh Categories</span>
+        <h2 class="section-title">Explore Our Two Dedicated Harvests</h2>
+        <p class="section-desc">
+          Organically nurtured in nutrient-dense soil under Gujarat sunlight. Choose a harvest to explore detailed profiles, nutritional benefits, and order options.
+        </p>
+      </div>
+
+      <div class="cat-grid">
+        <!-- FRUITS CATEGORY CARD -->
+        <a href="fruits.html" class="cat-card reveal-left" id="card-fruits-cat" aria-label="Explore Organic Fruits">
+          <div class="cat-card-bg">
+            <img src="images/fruits_collection.png" alt="Freshly harvested organic fruits assortment" class="cat-card-img" />
+            <div class="cat-card-overlay"></div>
+          </div>
+          <div class="cat-card-body">
+            <div class="cat-card-icon-wrap">
+              <i class="fa-solid fa-apple-whole"></i>
+            </div>
+            <span class="cat-count"><i class="fa-solid fa-sparkles"></i> 8+ Exotic &amp; Seasonal Varieties</span>
+            <h3>Organic Exotic Fruits</h3>
+            <p>Vibrant Dragon Fruit, crunchy sweet Guava, creamy Sitafal (Custard Apple), ripe Kesar &amp; Alphonso Mangoes, Passion Fruit and more.</p>
+            <span class="cat-cta">
+              Browse All Fruits <i class="fa-solid fa-arrow-right"></i>
+            </span>
+          </div>
+        </a>
+
+        <!-- VEGETABLES CATEGORY CARD -->
+        <a href="vegetables.html" class="cat-card reveal-right" id="card-veg-cat" aria-label="Explore Organic Vegetables">
+          <div class="cat-card-bg">
+            <img src="images/vegetables_collection.png" alt="Freshly harvested organic vegetables assortment" class="cat-card-img" />
+            <div class="cat-card-overlay veg-overlay"></div>
+          </div>
+          <div class="cat-card-body">
+            <div class="cat-card-icon-wrap veg-icon">
+              <i class="fa-solid fa-carrot"></i>
+            </div>
+            <span class="cat-count"><i class="fa-solid fa-leaf"></i> 12+ Daily &amp; Medicinal Varieties</span>
+            <h3>Organic Fresh Vegetables</h3>
+            <p>Tender Palak (Spinach), medicinal Karela (Bitter Gourd), crisp Bhindi, calcium-rich Moringa drumsticks, fresh vine tomatoes, and native herbs.</p>
+            <span class="cat-cta">
+              Browse All Vegetables <i class="fa-solid fa-arrow-right"></i>
+            </span>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ CUSTOMER FAVORITES ══ -->
+  <section class="featured-section" id="featured" aria-label="Customer Favorites">
+    <div class="container">
+      <div class="section-head reveal-up">
+        <span class="section-pill"><i class="fa-solid fa-star"></i> Farm Highlights</span>
+        <h2 class="section-title">Our Signature Organic Produce</h2>
+        <p class="section-desc">
+          Hand-picked favorites cherished by families across Gujarat for superior flavor, high nutritional density, and purity.
+        </p>
+      </div>
+
+      <div class="featured-grid">
+        <!-- DRAGON FRUIT -->
+        <div class="feat-card" style="--di: 1">
+          <div class="feat-photo-wrap">
+            <img src="https://images.unsplash.com/photo-1527325678964-54921661f888?auto=format&fit=crop&w=600&q=80" 
+                 alt="Organic Dragon Fruit harvested fresh" class="feat-photo" loading="lazy" />
+            <span class="feat-tag exotic"><i class="fa-solid fa-wand-magic-sparkles"></i> Exotic</span>
+          </div>
+          <div class="feat-info">
+            <h3>Dragon Fruit</h3>
+            <p>Antioxidant-dense tropical superfruit with radiant magenta skin and crisp, refreshing pulp.</p>
+            <a href="https://wa.me/918320852144?text=I%20would%20like%20to%20order%20Dragon%20Fruit%20from%20Nature's%20Nest"
+               class="feat-btn" target="_blank" rel="noopener">
+              <i class="fa-brands fa-whatsapp"></i> Order Fruit
+            </a>
+          </div>
+        </div>
+
+        <!-- SITAFAL -->
+        <div class="feat-card" style="--di: 2">
+          <div class="feat-photo-wrap">
+            <img src="https://images.unsplash.com/photo-1615485290382-441e4d049cb5?auto=format&fit=crop&w=600&q=80" 
+                 alt="Organic Sitafal Custard Apple fresh from tree" class="feat-photo" loading="lazy" />
+            <span class="feat-tag popular"><i class="fa-solid fa-star"></i> Best Seller</span>
+          </div>
+          <div class="feat-info">
+            <h3>Sitafal (Custard Apple)</h3>
+            <p>Velvety, naturally sweet custard texture. High in magnesium, potassium, and energy.</p>
+            <a href="https://wa.me/918320852144?text=I%20would%20like%20to%20order%20Sitafal%20(Custard%20Apple)%20from%20Nature's%20Nest"
+               class="feat-btn" target="_blank" rel="noopener">
+              <i class="fa-brands fa-whatsapp"></i> Order Fruit
+            </a>
+          </div>
+        </div>
+
+        <!-- GUAVA -->
+        <div class="feat-card" style="--di: 3">
+          <div class="feat-photo-wrap">
+            <img src="https://images.unsplash.com/photo-1536511135898-0e628469956d?auto=format&fit=crop&w=600&q=80" 
+                 alt="Crisp organic Guava Amrood" class="feat-photo" loading="lazy" />
+            <span class="feat-tag seasonal"><i class="fa-solid fa-sun"></i> Seasonal</span>
+          </div>
+          <div class="feat-info">
+            <h3>Guava (Amrood)</h3>
+            <p>Crisp, highly fragrant farm-grown guavas containing 4x the Vitamin C of common oranges.</p>
+            <a href="https://wa.me/918320852144?text=I%20would%20like%20to%20order%20Guava%20(Amrood)%20from%20Nature's%20Nest"
+               class="feat-btn" target="_blank" rel="noopener">
+              <i class="fa-brands fa-whatsapp"></i> Order Fruit
+            </a>
+          </div>
+        </div>
+
+        <!-- MORINGA -->
+        <div class="feat-card" style="--di: 4">
+          <div class="feat-photo-wrap">
+            <img src="https://images.unsplash.com/photo-1540420773420-3366772f4999?auto=format&fit=crop&w=600&q=80" 
+                 alt="Nutrient-rich Moringa Drumstick Sahjan" class="feat-photo" loading="lazy" />
+            <span class="feat-tag superfood"><i class="fa-solid fa-bolt"></i> Superfood</span>
+          </div>
+          <div class="feat-info">
+            <h3>Moringa (Sahjan)</h3>
+            <p>Ayurvedic powerhouse loaded with calcium, iron, and plant-based anti-inflammatory nutrients.</p>
+            <a href="https://wa.me/918320852144?text=I%20would%20like%20to%20order%20Moringa%20Drumsticks%20from%20Nature's%20Nest"
+               class="feat-btn" target="_blank" rel="noopener">
+              <i class="fa-brands fa-whatsapp"></i> Order Veg
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="feat-footer reveal-up">
+        <a href="fruits.html" class="btn btn-outline-green">
+          <i class="fa-solid fa-apple-whole"></i> All 8 Fruits
+        </a>
+        <a href="vegetables.html" class="btn btn-outline-green">
+          <i class="fa-solid fa-carrot"></i> All 12 Vegetables
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ ABOUT US / OUR STORY ══ -->
+  <section class="about-section" id="about" aria-label="About Nature's Nest">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-img-stack reveal-left">
+          <img src="images/farm_story.png" alt="Nature's Nest eco-friendly sustainable organic farm fields in Gujarat" class="about-main-img" loading="lazy" />
+          <div class="about-badge-card">
+            <img src="images/organic_badge.png" alt="100% Certified Organic Farm Seal" />
+          </div>
+          <div class="about-floating-stat">
+            <span class="afs-num">100%</span>
+            <span class="afs-text">Natural Farming</span>
+          </div>
+        </div>
+
+        <div class="about-text-col reveal-right">
+          <span class="section-pill"><i class="fa-solid fa-hand-holding-heart"></i> Sustainable Organic Farming</span>
+          <h2 class="section-title">Grown with Care, Harvested with Integrity</h2>
+          <p class="about-p">
+            Welcome to <strong>Nature's Nest</strong>, an ethical organic farm rooted in the rich soil of Gujarat. 
+            We founded our farm with a simple principle: food should nourish both human health and living soil.
+          </p>
+          <p class="about-p">
+            Every fruit and vegetable on our land is grown without synthetic fertilizers, synthetic ripening agents, or chemical sprays. 
+            By utilizing native compost, rainwater harvesting, and integrated pest management, our produce retains its genuine heirloom flavor and high vitamin potency.
+          </p>
+
+          <div class="about-feats">
+            <div class="ab-feat">
+              <span class="ab-feat-icon"><i class="fa-solid fa-droplet"></i></span>
+              <div>
+                <strong>Drip Irrigated</strong>
+                <small>Conserving water with precision eco-irrigation</small>
+              </div>
+            </div>
+            <div class="ab-feat">
+              <span class="ab-feat-icon"><i class="fa-solid fa-certificate"></i></span>
+              <div>
+                <strong>Chemical-Free</strong>
+                <small>Zero artificial additives or ethylene gas ripening</small>
+              </div>
+            </div>
+            <div class="ab-feat">
+              <span class="ab-feat-icon"><i class="fa-solid fa-handshake"></i></span>
+              <div>
+                <strong>Fair &amp; Direct</strong>
+                <small>No middlemen — straight from farm to your kitchen</small>
+              </div>
+            </div>
+            <div class="ab-feat">
+              <span class="ab-feat-icon"><i class="fa-solid fa-box-open"></i></span>
+              <div>
+                <strong>Eco Packaging</strong>
+                <small>Sustainable packaging for minimum environmental impact</small>
+              </div>
+            </div>
+          </div>
+
+          <div class="about-actions">
+            <a href="tel:+918320852144" class="btn btn-primary">
+              <i class="fa-solid fa-phone"></i> Inquire at +91 83208 52144
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ HOW TO ORDER (3 STEPS) ══ -->
+  <section class="order-section" id="order" aria-label="How to Order">
+    <div class="order-bg-animated" aria-hidden="true"></div>
+    <div class="container">
+      <div class="section-head reveal-up">
+        <span class="section-pill light"><i class="fa-solid fa-truck-fast"></i> Seamless Ordering</span>
+        <h2 class="section-title light-title">Farm-Fresh Produce in 3 Simple Steps</h2>
+        <p class="section-desc light-desc">
+          We harvest according to orders to guarantee peak freshness upon arrival.
+        </p>
+      </div>
+
+      <div class="steps-row reveal-up">
+        <div class="step-card">
+          <div class="step-num">STEP 01</div>
+          <div class="step-icon"><i class="fa-solid fa-basket-shopping"></i></div>
+          <h3>Select Your Produce</h3>
+          <p>Browse our <a href="fruits.html">Fruits Catalog</a> or <a href="vegetables.html">Vegetables Catalog</a> to select your desired quantities.</p>
+        </div>
+        <div class="step-connector" aria-hidden="true"><i class="fa-solid fa-arrow-right"></i></div>
+        <div class="step-card">
+          <div class="step-num">STEP 02</div>
+          <div class="step-icon"><i class="fa-brands fa-whatsapp"></i></div>
+          <h3>WhatsApp or Call Us</h3>
+          <p>Send your list via WhatsApp to <strong>8320852144</strong> or call us directly. We verify daily fresh availability and confirm pricing.</p>
+        </div>
+        <div class="step-connector" aria-hidden="true"><i class="fa-solid fa-arrow-right"></i></div>
+        <div class="step-card">
+          <div class="step-num">STEP 03</div>
+          <div class="step-icon"><i class="fa-solid fa-truck-fast"></i></div>
+          <h3>Harvest &amp; Delivery</h3>
+          <p>Your produce is harvested fresh and securely dispatched straight to your doorstep or ready for farm pickup.</p>
+        </div>
+      </div>
+
+      <div class="order-actions reveal-up">
+        <a href="https://wa.me/918320852144?text=Hello!%20I%20would%20like%20to%20place%20an%20order%20for%20fresh%20organic%20produce."
+           class="btn btn-whatsapp btn-xl" target="_blank" rel="noopener" id="order-step-wa">
+          <i class="fa-brands fa-whatsapp"></i> Order on WhatsApp Now
+        </a>
+        <a href="tel:+918320852144" class="btn btn-call btn-xl" id="order-step-call">
+          <i class="fa-solid fa-phone"></i> Call +91 83208 52144
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ CONTACT & GOOGLE MAPS ══ -->
+  <section class="contact-section" id="contact" aria-label="Contact and Map Directions">
+    <div class="container">
+      <div class="section-head reveal-up">
+        <span class="section-pill"><i class="fa-solid fa-map-location-dot"></i> Visit Our Farm</span>
+        <h2 class="section-title">Directions &amp; Contact Details</h2>
+        <p class="section-desc">
+          Plan a visit to experience organic farming firsthand, pick up orders directly, or get in touch for custom bulk orders.
+        </p>
+      </div>
+
+      <div class="contact-layout">
+        <!-- CONTACT DETAILS -->
+        <div class="contact-cards-col reveal-left">
+          <div class="ccard">
+            <div class="ccard-icon" style="background: linear-gradient(135deg, #25d366, #128c7e);">
+              <i class="fa-brands fa-whatsapp"></i>
+            </div>
+            <div class="ccard-body">
+              <h4>WhatsApp Ordering</h4>
+              <a href="https://wa.me/918320852144" target="_blank" rel="noopener" class="ccard-link">+91 83208 52144</a>
+              <span>Instant order confirmation &amp; daily rates</span>
+            </div>
+          </div>
+
+          <div class="ccard">
+            <div class="ccard-icon" style="background: linear-gradient(135deg, #4facfe, #0084ff);">
+              <i class="fa-solid fa-phone"></i>
+            </div>
+            <div class="ccard-body">
+              <h4>Direct Telephone</h4>
+              <a href="tel:+918320852144" class="ccard-link">+91 83208 52144</a>
+              <span>Available Monday to Saturday: 7 AM – 7 PM</span>
+            </div>
+          </div>
+
+          <div class="ccard">
+            <div class="ccard-icon" style="background: linear-gradient(135deg, #40916c, #1b4332);">
+              <i class="fa-solid fa-location-dot"></i>
+            </div>
+            <div class="ccard-body">
+              <h4>Farm Location</h4>
+              <span class="ccard-link">Nature's Nest Organic Farm</span>
+              <span>Gujarat, India &bull; Visitors welcome with prior notice</span>
+            </div>
+          </div>
+
+          <div class="ccard">
+            <div class="ccard-icon" style="background: linear-gradient(135deg, #f4a261, #e76f51);">
+              <i class="fa-solid fa-clock"></i>
+            </div>
+            <div class="ccard-body">
+              <h4>Harvest Schedule</h4>
+              <span class="ccard-link">Daily 07:00 AM – 11:00 AM</span>
+              <span>Morning-picked produce dispatched within hours</span>
+            </div>
+          </div>
+
+          <a href="https://maps.google.com/?q=Organic+Farm+Gujarat+India" target="_blank" rel="noopener" class="btn-directions-full">
+            <i class="fa-solid fa-diamond-turn-right"></i> Open Navigation in Google Maps
+          </a>
+        </div>
+
+        <!-- EMBEDDED GOOGLE MAP -->
+        <div class="map-wrapper reveal-right">
+          <div class="map-header">
+            <i class="fa-solid fa-map-pin"></i>
+            <span>Interactive Map &bull; Nature's Nest Organic Farm, Gujarat</span>
+          </div>
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3671.970425032549!2d72.5713621!3d23.022505!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395e848aba5bd449%3A0x4fcedd11614f6516!2sGujarat!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin"
+            width="100%"
+            height="380"
+            style="border:0;"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            title="Google Maps location of Nature's Nest Organic Farm in Gujarat">
+          </iframe>
+          <a href="https://maps.google.com/?q=Organic+Farm+Gujarat+India" target="_blank" rel="noopener" class="map-open-btn">
+            <i class="fa-solid fa-location-arrow"></i> Get Live Turn-by-Turn Directions
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ FOOTER ══ -->
+  <footer class="footer" aria-label="Site footer">
+    <div class="footer-top">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <div class="logo">
+              <div class="logo-icon-wrap">
+                <i class="fa-solid fa-seedling"></i>
+              </div>
+              <div class="logo-words">
+                <span class="logo-name">Nature's Nest</span>
+                <span class="logo-sub">Organic Farm Fresh</span>
+              </div>
+            </div>
+            <p class="footer-tagline">
+              Dedicated to cultivating 100% certified organic exotic fruits and vegetables with natural farming practices in Gujarat, India.
+            </p>
+            <div class="footer-socials">
+              <a href="https://wa.me/918320852144" class="fsoc wa" aria-label="WhatsApp" target="_blank" rel="noopener"><i class="fa-brands fa-whatsapp"></i></a>
+              <a href="tel:+918320852144" class="fsoc ph" aria-label="Phone"><i class="fa-solid fa-phone"></i></a>
+            </div>
+          </div>
+
+          <div class="footer-col">
+            <h5>Organic Fruits</h5>
+            <ul>
+              <li><a href="fruits.html#dragon">Dragon Fruit</a></li>
+              <li><a href="fruits.html#guava">Guava (Amrood)</a></li>
+              <li><a href="fruits.html#sitafal">Sitafal (Custard Apple)</a></li>
+              <li><a href="fruits.html#mango">Mango (Kesar / Alphonso)</a></li>
+              <li><a href="fruits.html#passion">Passion Fruit</a></li>
+              <li><a href="fruits.html">View All Fruits &rarr;</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-col">
+            <h5>Organic Vegetables</h5>
+            <ul>
+              <li><a href="vegetables.html#spinach">Spinach (Palak)</a></li>
+              <li><a href="vegetables.html#karela">Bitter Gourd (Karela)</a></li>
+              <li><a href="vegetables.html#bhindi">Okra (Bhindi)</a></li>
+              <li><a href="vegetables.html#moringa">Moringa Drumsticks</a></li>
+              <li><a href="vegetables.html#tomato">Vine Tomatoes</a></li>
+              <li><a href="vegetables.html">View All Vegetables &rarr;</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-col">
+            <h5>Contact &amp; Ordering</h5>
+            <div class="footer-contact">
+              <a href="tel:+918320852144" class="fc-item"><i class="fa-solid fa-phone"></i> +91 83208 52144</a>
+              <a href="https://wa.me/918320852144" class="fc-item" target="_blank" rel="noopener"><i class="fa-brands fa-whatsapp"></i> Chat on WhatsApp</a>
+              <span class="fc-item"><i class="fa-solid fa-location-dot"></i> Gujarat, India</span>
+              <span class="fc-item"><i class="fa-solid fa-clock"></i> Mon–Sat: 7:00 AM – 7:00 PM</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container">
+        <p>&copy; 2024 Nature's Nest Organic Farm &bull; All rights reserved &bull; Cultivated with <i class="fa-solid fa-heart" style="color: #52b788;"></i> for Healthy Living</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ══ SCRIPTS ══ -->
+  <script src="js/shared.js"></script>
+  <script src="js/home.js"></script>
+</body>
+</html>

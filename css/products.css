@@ -1,0 +1,363 @@
+/* ═══════════════════════════════════════════
+   NATURE'S NEST — PRODUCTS PAGE CSS (Fruits & Vegetables)
+═══════════════════════════════════════════ */
+
+/* ════ PAGE HERO BANNER ════ */
+.page-hero {
+  position: relative;
+  min-height: 55vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  padding-top: 80px;
+  background: var(--g950);
+}
+.page-hero-bg { position: absolute; inset: 0; z-index: 0; }
+.page-hero-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  transform: scale(1.03);
+  animation: heroZoom2 18s ease infinite alternate;
+}
+@keyframes heroZoom2 {
+  from { transform: scale(1.03); }
+  to   { transform: scale(1.09); }
+}
+.page-hero-overlay {
+  position: absolute; inset: 0;
+}
+.fruits-overlay {
+  background: linear-gradient(135deg, rgba(40, 10, 50, 0.9) 0%, rgba(13, 43, 30, 0.8) 55%, rgba(27, 67, 50, 0.65) 100%);
+}
+.veg-overlay-dark {
+  background: linear-gradient(135deg, rgba(7, 26, 18, 0.92) 0%, rgba(13, 43, 30, 0.82) 55%, rgba(27, 67, 50, 0.7) 100%);
+}
+
+.page-hero-content {
+  position: relative;
+  z-index: 3;
+  text-align: center;
+  color: white;
+  padding: 60px 24px 70px;
+  max-width: 820px;
+}
+
+/* Breadcrumbs */
+.breadcrumb {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.7);
+  margin-bottom: 16px;
+  font-weight: 600;
+}
+.breadcrumb a { color: rgba(255, 255, 255, 0.7); transition: color 0.2s; }
+.breadcrumb a:hover { color: white; }
+.breadcrumb i { font-size: 11px; }
+
+.page-hero-title {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(34px, 5.5vw, 68px);
+  font-weight: 800;
+  color: white;
+  line-height: 1.15;
+  margin: 12px 0 16px;
+  letter-spacing: -0.5px;
+}
+.page-hero-sub {
+  font-size: clamp(14px, 1.7vw, 17px);
+  color: rgba(255, 255, 255, 0.82);
+  line-height: 1.65;
+  margin-bottom: 30px;
+  max-width: 640px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.page-hero-btns {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* ════ FILTER BAR ════ */
+.filter-bar {
+  background: white;
+  border-bottom: 1px solid rgba(82, 183, 136, 0.18);
+  position: sticky;
+  top: 70px;
+  z-index: 100;
+  box-shadow: 0 4px 16px rgba(13, 43, 30, 0.05);
+}
+.filter-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 0;
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+.filter-row::-webkit-scrollbar { display: none; }
+.filter-label {
+  font-size: 13px;
+  font-weight: 800;
+  color: var(--txt-mid);
+  white-space: nowrap;
+  letter-spacing: 0.3px;
+  margin-right: 4px;
+}
+.filter-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 8px 18px;
+  border-radius: var(--r-full);
+  font-size: 13px;
+  font-weight: 600;
+  background: var(--bg-alt);
+  color: var(--txt-mid);
+  border: 1px solid transparent;
+  cursor: pointer;
+  transition: var(--t-fast);
+  white-space: nowrap;
+}
+.filter-btn i { font-size: 13px; color: var(--g600); }
+.filter-btn:hover {
+  background: var(--g100);
+  color: var(--g900);
+}
+.filter-btn.active {
+  background: var(--g800);
+  color: white;
+  border-color: var(--g800);
+  box-shadow: 0 4px 14px rgba(27, 67, 50, 0.3);
+}
+.filter-btn.active i { color: var(--gold); }
+.filter-bar-veg .filter-btn.active { background: var(--g700); border-color: var(--g700); }
+
+/* ════ PRODUCTS MAIN ════ */
+.products-main { padding: 50px 0 96px; background: var(--bg-light); }
+.prod-count {
+  font-size: 14px;
+  color: var(--txt-light);
+  font-weight: 600;
+  margin-bottom: 28px;
+}
+.prod-count span { font-weight: 800; color: var(--g700); }
+
+/* ════ PRODUCT GRID ════ */
+.prod-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 26px;
+  margin-bottom: 60px;
+}
+
+.prod-card {
+  background: white;
+  border-radius: var(--r-md);
+  overflow: hidden;
+  box-shadow: var(--sh-sm);
+  border: 1px solid rgba(82, 183, 136, 0.15);
+  transition: var(--t-mid);
+  display: flex;
+  flex-direction: column;
+}
+.prod-card:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--sh-lg);
+  border-color: var(--g400);
+}
+.prod-card.featured-card {
+  border: 2px solid var(--g500);
+  box-shadow: 0 4px 24px rgba(82, 183, 136, 0.2);
+}
+
+/* Photo area */
+.prod-img-wrap {
+  position: relative;
+  height: 200px;
+  overflow: hidden;
+  background: var(--g100);
+}
+.prod-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s var(--ease);
+}
+.prod-card:hover .prod-photo {
+  transform: scale(1.08);
+}
+.prod-badges {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  align-items: flex-end;
+  z-index: 2;
+}
+.pbadge {
+  padding: 4px 10px;
+  border-radius: var(--r-full);
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  backdrop-filter: blur(8px);
+}
+.pbadge.organic   { background: rgba(45, 106, 79, 0.9); color: white; }
+.pbadge.seasonal  { background: rgba(245, 158, 11, 0.9); color: white; }
+.pbadge.popular   { background: rgba(217, 119, 6, 0.95); color: white; }
+.pbadge.exotic    { background: rgba(139, 92, 246, 0.9); color: white; }
+.pbadge.superfood { background: rgba(16, 185, 129, 0.9); color: white; }
+.pbadge.medicinal { background: rgba(225, 29, 72, 0.9); color: white; }
+.pbadge.leafy     { background: rgba(5, 150, 105, 0.9); color: white; }
+.pbadge.daily     { background: rgba(2, 132, 199, 0.9); color: white; }
+
+/* Body content */
+.prod-body {
+  padding: 22px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+.prod-name {
+  font-family: 'Playfair Display', serif;
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--g900);
+  margin-bottom: 8px;
+  line-height: 1.25;
+}
+.prod-desc {
+  font-size: 13px;
+  color: var(--txt-light);
+  line-height: 1.65;
+  margin-bottom: 18px;
+  flex: 1;
+}
+.prod-nutrients {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 20px;
+}
+.prod-nutrients span {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: var(--bg-alt);
+  color: var(--g800);
+  font-size: 11px;
+  font-weight: 600;
+  padding: 4px 10px;
+  border-radius: var(--r-full);
+  border: 1px solid var(--g200);
+}
+.prod-nutrients span i { font-size: 11px; color: var(--g600); }
+
+/* Card actions */
+.prod-actions {
+  display: flex;
+  gap: 8px;
+}
+.prod-wa-btn {
+  flex: 1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 11px;
+  background: linear-gradient(135deg, var(--wa), var(--wa-d));
+  color: white;
+  border-radius: var(--r-full);
+  font-weight: 700;
+  font-size: 13px;
+  transition: var(--t-fast);
+}
+.prod-wa-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 14px rgba(37, 211, 102, 0.4);
+}
+.prod-call-btn {
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, var(--call), var(--call-d));
+  color: white;
+  border-radius: var(--r-full);
+  font-size: 15px;
+  transition: var(--t-fast);
+  flex-shrink: 0;
+}
+.prod-call-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 14px rgba(59, 130, 246, 0.4);
+}
+
+/* CTA BANNER */
+.page-cta-banner {
+  border-radius: var(--r-lg);
+  overflow: hidden;
+  box-shadow: var(--sh-md);
+}
+.cta-banner-inner {
+  background: linear-gradient(135deg, var(--g900), var(--g800));
+  padding: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 28px;
+  flex-wrap: wrap;
+}
+.veg-cta .cta-banner-inner {
+  background: linear-gradient(135deg, var(--g950), var(--g900));
+}
+.cta-banner-text h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 26px;
+  font-weight: 800;
+  color: white;
+  margin-bottom: 8px;
+}
+.cta-banner-text p {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.78);
+  max-width: 520px;
+  line-height: 1.6;
+}
+.cta-banner-btns {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  flex-shrink: 0;
+}
+
+/* ════ RESPONSIVE (PRODUCTS) ════ */
+@media (max-width: 768px) {
+  .prod-grid { grid-template-columns: repeat(2, 1fr); gap: 16px; }
+  .cta-banner-inner { flex-direction: column; text-align: center; }
+  .cta-banner-btns { justify-content: center; width: 100%; }
+  .cta-banner-btns .btn { width: 100%; max-width: 320px; }
+  .page-hero-btns { flex-direction: column; align-items: center; width: 100%; }
+  .page-hero-btns .btn { width: 100%; max-width: 320px; }
+  .filter-row { gap: 6px; padding: 12px 0; }
+}
+
+@media (max-width: 520px) {
+  .prod-grid { grid-template-columns: 1fr; }
+  .prod-img-wrap { height: 180px; }
+}
