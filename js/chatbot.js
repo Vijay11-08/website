@@ -1,4 +1,4 @@
-/* ═══════════════════════════════════════════
+﻿/* ═══════════════════════════════════════════
    NATURE'S NEST — FARM CHATBOT ENGINE
 ═══════════════════════════════════════════ */
 
@@ -89,7 +89,7 @@
                 "4. <strong>Moringa (Sahjan):</strong> Rich in chlorogenic acid.<br/>" +
                 "<div class='chat-action-card'>" +
                 "  <h5><i class='fa-brands fa-whatsapp' style='color:#25d366'></i> Order Diabetic Care Basket</h5>" +
-                "  <a class='chat-action-btn' target='_blank' rel='noopener' href='https://wa.me/918320852144?text=Hi!%20I%20want%20to%20order%20the%20Diabetic-Care%20Produce%20Pack%20(Karela,%20Jamun,%20Methi,%20Moringa).'>Order on WhatsApp (8320852144)</a>" +
+                "  <a class='chat-action-btn' target='_blank' rel='noopener' href='https://wa.me/919825638381?text=Hi!%20I%20want%20to%20order%20the%20Diabetic-Care%20Produce%20Pack%20(Karela,%20Jamun,%20Methi,%20Moringa).'>Order on WhatsApp (9825638381)</a>" +
                 "</div>"
     },
     {
@@ -104,11 +104,11 @@
       keywords: ['order', 'buy', 'price', 'delivery', 'whatsapp', 'call', 'cost'],
       response: "<strong>How to Place an Order:</strong><br/>" +
                 "1. Choose items from our <strong>Fruits</strong> or <strong>Vegetables</strong> catalog.<br/>" +
-                "2. Tap the WhatsApp or Call button (<strong>+91 83208 52144</strong>).<br/>" +
+                "2. Tap the WhatsApp or Call button (<strong>+91 98256 38381</strong>).<br/>" +
                 "3. We confirm daily harvest availability and dispatch directly to your home in Gujarat!<br/>" +
                 "<div class='chat-action-card'>" +
                 "  <h5><i class='fa-brands fa-whatsapp' style='color:#25d366'></i> Direct WhatsApp Chat</h5>" +
-                "  <a class='chat-action-btn' target='_blank' rel='noopener' href='https://wa.me/918320852144?text=Hello!%20Please%20share%20today%27s%20fresh%20harvest%20price%20list%20and%20delivery%20options.'>Message Farm Now (8320852144)</a>" +
+                "  <a class='chat-action-btn' target='_blank' rel='noopener' href='https://wa.me/919825638381?text=Hello!%20Please%20share%20today%27s%20fresh%20harvest%20price%20list%20and%20delivery%20options.'>Message Farm Now (9825638381)</a>" +
                 "</div>"
     },
     {

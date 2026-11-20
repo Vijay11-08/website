@@ -1,4 +1,4 @@
-/* ═══════════════════════════════════════════
+﻿/* ═══════════════════════════════════════════
    NATURE'S NEST — HOME PAGE JS
 ═══════════════════════════════════════════ */
 
@@ -101,7 +101,7 @@ document.querySelectorAll('.cat-card').forEach(function(card) {
 setTimeout(function() {
   var toast = document.createElement('div');
   toast.style.cssText = 'position:fixed;bottom:90px;left:50%;transform:translateX(-50%) translateY(16px);background:rgba(7,26,18,0.96);color:#fff;padding:12px 24px;border-radius:50px;font-size:13px;font-weight:600;box-shadow:0 8px 30px rgba(0,0,0,0.25);z-index:9998;opacity:0;transition:all 0.4s cubic-bezier(0.16,1,0.3,1);white-space:nowrap;max-width:92vw;text-align:center;border:1px solid rgba(82,183,136,0.35);pointer-events:none;display:inline-flex;align-items:center;gap:10px;';
-  toast.innerHTML = '<i class="fa-solid fa-leaf" style="color:#52b788"></i> Fresh organic produce available &bull; Order via WhatsApp: +91 8320852144';
+  toast.innerHTML = '<i class="fa-solid fa-leaf" style="color:#52b788"></i> Fresh organic produce available &bull; Order via WhatsApp: +91 9825638381';
   document.body.appendChild(toast);
 
   requestAnimationFrame(function() {

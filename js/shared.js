@@ -38,17 +38,69 @@ function cycleTheme() {
   applyTheme(nextTheme);
 }
 
-// Inject Theme Toggle Button in Navbar if present
+/* ── LIGHT & DARK MODE CONTROLLER ── */
+var isDarkMode = localStorage.getItem('nature_nest_dark_mode') === 'true';
+applyDarkMode(isDarkMode);
+
+function applyDarkMode(enableDark) {
+  if (enableDark) {
+    document.body.classList.add('theme-dark');
+  } else {
+    document.body.classList.remove('theme-dark');
+  }
+  localStorage.setItem('nature_nest_dark_mode', enableDark ? 'true' : 'false');
+
+  var darkBtn = document.getElementById('dark-mode-toggle-btn');
+  if (darkBtn) {
+    darkBtn.innerHTML = enableDark
+      ? '<i class="fa-solid fa-sun"></i> Light Mode'
+      : '<i class="fa-solid fa-moon"></i> Dark Mode';
+    darkBtn.setAttribute('aria-label', enableDark ? 'Switch to Light Mode' : 'Switch to Dark Mode');
+  }
+}
+
+function toggleDarkMode() {
+  var current = document.body.classList.contains('theme-dark');
+  applyDarkMode(!current);
+}
+
+// Inject Theme & Dark Mode Toggle Buttons in Navbar
 window.addEventListener('DOMContentLoaded', function() {
   var navLinks = document.getElementById('nav-links');
-  if (navLinks && !document.getElementById('theme-toggle-btn')) {
-    var themeBtn = document.createElement('button');
-    themeBtn.id = 'theme-toggle-btn';
-    themeBtn.className = 'theme-switch-btn';
-    themeBtn.setAttribute('aria-label', 'Switch Fruit & Vegetable Theme');
-    themeBtn.innerHTML = themeLabels[savedTheme] || themeLabels['default'];
-    themeBtn.addEventListener('click', cycleTheme);
-    navLinks.insertBefore(themeBtn, navLinks.querySelector('.nav-cta'));
+  if (navLinks) {
+    var cta = navLinks.querySelector('.nav-cta');
+
+    // Fruit & Veg Theme Switcher
+    if (!document.getElementById('theme-toggle-btn')) {
+      var themeBtn = document.createElement('button');
+      themeBtn.id = 'theme-toggle-btn';
+      themeBtn.className = 'theme-switch-btn';
+      themeBtn.setAttribute('aria-label', 'Switch Fruit & Vegetable Theme');
+      themeBtn.innerHTML = themeLabels[savedTheme] || themeLabels['default'];
+      themeBtn.addEventListener('click', cycleTheme);
+      if (cta) {
+        navLinks.insertBefore(themeBtn, cta);
+      } else {
+        navLinks.appendChild(themeBtn);
+      }
+    }
+
+    // Light / Dark Mode Toggle Button
+    if (!document.getElementById('dark-mode-toggle-btn')) {
+      var darkBtn = document.createElement('button');
+      darkBtn.id = 'dark-mode-toggle-btn';
+      darkBtn.className = 'dark-mode-toggle-btn';
+      darkBtn.setAttribute('aria-label', isDarkMode ? 'Switch to Light Mode' : 'Switch to Dark Mode');
+      darkBtn.innerHTML = isDarkMode
+        ? '<i class="fa-solid fa-sun"></i> Light Mode'
+        : '<i class="fa-solid fa-moon"></i> Dark Mode';
+      darkBtn.addEventListener('click', toggleDarkMode);
+      if (cta) {
+        navLinks.insertBefore(darkBtn, cta);
+      } else {
+        navLinks.appendChild(darkBtn);
+      }
+    }
   }
 });
 
