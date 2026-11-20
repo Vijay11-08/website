@@ -366,6 +366,50 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 }
 .nav-link.active i { color: var(--g800); }
 
+/* Location GPS Quick-Directions Nav Button */
+.nav-location-link {
+  color: var(--g800);
+  font-weight: 700;
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  background: rgba(230, 57, 70, 0.06);
+  border: 1px solid rgba(230, 57, 70, 0.22);
+}
+.nav-location-link i {
+  color: #e63946 !important;
+  font-size: 14px;
+  animation: pinBounce 2.2s ease infinite;
+}
+@keyframes pinBounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-3px); }
+}
+.nav-location-link:hover {
+  background: #e63946 !important;
+  color: #ffffff !important;
+  border-color: #e63946 !important;
+}
+.nav-location-link:hover i {
+  color: #ffffff !important;
+}
+
+body.theme-dark .nav-location-link {
+  background: rgba(255, 107, 107, 0.14);
+  border-color: rgba(255, 107, 107, 0.35);
+  color: #f1f5f3;
+}
+body.theme-dark .nav-location-link i {
+  color: #ff6b6b !important;
+}
+body.theme-dark .nav-location-link:hover {
+  background: #ff6b6b !important;
+  color: #0b120e !important;
+}
+body.theme-dark .nav-location-link:hover i {
+  color: #0b120e !important;
+}
+
 /* Theme Switcher Toggle Pill & Dark Mode Toggle Pill */
 .theme-switch-btn,
 .dark-mode-toggle-btn {
