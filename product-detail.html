@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Produce Profile &amp; Nutrition | Nature's Nest Organic Farm</title>
+  <meta name="description" content="Explore full organic nutrition profiles, health benefits, and harvest cycles for farm-fresh fruits and vegetables grown in Gujarat, India." />
+  <meta name="robots" content="index, follow" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,800;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- FontAwesome 6 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/shared.css" />
+  <link rel="stylesheet" href="css/chatbot.css" />
+  <link rel="stylesheet" href="css/products.css" />
+
+  <style>
+    .detail-hero {
+      padding: 130px 0 60px;
+      background: linear-gradient(135deg, var(--g950) 0%, var(--g900) 60%, var(--g800) 100%);
+      color: #fff;
+    }
+    .detail-layout {
+      display: grid;
+      grid-template-columns: 1.1fr 1.3fr;
+      gap: 48px;
+      align-items: start;
+      margin-top: 30px;
+    }
+    .detail-img-box {
+      border-radius: var(--r-lg);
+      overflow: hidden;
+      box-shadow: var(--sh-xl);
+      border: 2px solid rgba(82,183,136,0.3);
+      position: relative;
+      background: var(--g900);
+      aspect-ratio: 4/3;
+    }
+    .detail-img-box img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.6s ease;
+    }
+    .detail-img-box:hover img {
+      transform: scale(1.05);
+    }
+    .detail-badge-float {
+      position: absolute;
+      top: 18px;
+      right: 18px;
+      background: rgba(13,43,30,0.85);
+      backdrop-filter: blur(8px);
+      padding: 6px 16px;
+      border-radius: var(--r-full);
+      font-size: 12px;
+      font-weight: 800;
+      color: var(--gold);
+      border: 1px solid rgba(255,255,255,0.2);
+    }
+    .detail-title {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(32px, 4vw, 46px);
+      font-weight: 800;
+      color: #fff;
+      line-height: 1.15;
+      margin-bottom: 8px;
+    }
+    .detail-sub-name {
+      font-size: 15px;
+      color: var(--g400);
+      font-weight: 700;
+      margin-bottom: 16px;
+      display: inline-block;
+    }
+    .detail-intro {
+      font-size: 15px;
+      color: rgba(255,255,255,0.82);
+      line-height: 1.7;
+      margin-bottom: 24px;
+    }
+    .detail-specs-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 14px;
+      margin-bottom: 30px;
+    }
+    .spec-card {
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.14);
+      border-radius: var(--r-sm);
+      padding: 14px 16px;
+    }
+    .spec-card strong {
+      display: block;
+      font-size: 11px;
+      color: var(--gold);
+      text-transform: uppercase;
+      letter-spacing: 0.6px;
+      margin-bottom: 4px;
+    }
+    .spec-card span {
+      font-size: 14px;
+      color: #fff;
+      font-weight: 600;
+    }
+    .detail-actions {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+    .detail-tabs-section {
+      padding: 80px 0;
+      background: var(--bg-light);
+    }
+    .info-card {
+      background: #fff;
+      border-radius: var(--r-md);
+      padding: 32px;
+      box-shadow: var(--sh-sm);
+      border: 1px solid rgba(82,183,136,0.15);
+      margin-bottom: 24px;
+    }
+    .info-card h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 22px;
+      color: var(--g900);
+      margin-bottom: 16px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .info-card h3 i {
+      color: var(--g600);
+      font-size: 18px;
+    }
+    .nutrition-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 14px;
+    }
+    .nutrition-item {
+      background: var(--bg-alt);
+      padding: 14px;
+      border-radius: var(--r-sm);
+      border-left: 3px solid var(--g500);
+    }
+    .nutrition-item b {
+      display: block;
+      font-size: 14px;
+      color: var(--g900);
+    }
+    .nutrition-item small {
+      color: var(--txt-light);
+      font-size: 12px;
+    }
+    .produce-selector-bar {
+      margin-bottom: 30px;
+      display: flex;
+      gap: 10px;
+      overflow-x: auto;
+      padding-bottom: 10px;
+      scrollbar-width: none;
+    }
+    .produce-select-btn {
+      padding: 8px 18px;
+      border-radius: var(--r-full);
+      background: #fff;
+      border: 1px solid rgba(82,183,136,0.25);
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--txt-mid);
+      cursor: pointer;
+      white-space: nowrap;
+      transition: all 0.2s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .produce-select-btn:hover, .produce-select-btn.active {
+      background: var(--g800);
+      color: #fff;
+      border-color: var(--g800);
+    }
+    @media (max-width: 900px) {
+      .detail-layout {
+        grid-template-columns: 1fr;
+        gap: 32px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <header class="header scrolled" id="header">
+    <div class="nav-container">
+      <a href="index.html" class="logo" aria-label="Nature's Nest Home">
+        <div class="logo-icon-wrap">
+          <i class="fa-solid fa-seedling"></i>
+        </div>
+        <div class="logo-words">
+          <span class="logo-name">Nature's Nest</span>
+          <span class="logo-sub">Organic Farm Fresh</span>
+        </div>
+      </a>
+
+      <nav class="nav-links" id="nav-links">
+        <a href="index.html" class="nav-link"><i class="fa-solid fa-house"></i> Home</a>
+        <a href="fruits.html" class="nav-link"><i class="fa-solid fa-apple-whole"></i> Fruits</a>
+        <a href="vegetables.html" class="nav-link"><i class="fa-solid fa-carrot"></i> Vegetables</a>
+        <a href="about.html" class="nav-link"><i class="fa-solid fa-circle-info"></i> Our Story</a>
+        <a href="contact.html" class="nav-link"><i class="fa-solid fa-map-location-dot"></i> Visit Us</a>
+        <a href="tel:+918320852144" class="nav-cta">
+          <i class="fa-solid fa-phone"></i> +91 83208 52144
+        </a>
+      </nav>
+
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Detail Hero Area -->
+  <section class="detail-hero" aria-label="Produce Detailed Overview">
+    <div class="container">
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <a href="index.html"><i class="fa-solid fa-house"></i> Home</a>
+        <i class="fa-solid fa-chevron-right"></i>
+        <a href="fruits.html" id="breadcrumb-category">Catalog</a>
+        <i class="fa-solid fa-chevron-right"></i>
+        <span id="breadcrumb-title">Produce Detail</span>
+      </nav>
+
+      <!-- Quick produce switcher pills -->
+      <div class="produce-selector-bar" id="selector-bar">
+        <!-- Rendered by JS -->
+      </div>
+
+      <div class="detail-layout">
+        <div class="detail-img-box">
+          <img id="detail-img" src="images/dragon_fruit.jpg" alt="Organic Produce photo" />
+          <div class="detail-badge-float" id="detail-category-badge">
+            <i class="fa-solid fa-certificate"></i> 100% Certified Organic
+          </div>
+        </div>
+
+        <div class="detail-text-col">
+          <h1 class="detail-title" id="detail-name">Dragon Fruit (Pitaya)</h1>
+          <span class="detail-sub-name" id="detail-botanical">Hylocereus undatus &bull; Kamalam (Gujarat)</span>
+          <p class="detail-intro" id="detail-desc">
+            Organically cultivated on our trellis orchard in Gujarat. Hand-picked at peak color without ethylene ripening. Rich in betalains, prebiotic dietary fiber, and natural vitamin complex.
+          </p>
+
+          <div class="detail-specs-grid">
+            <div class="spec-card">
+              <strong>Farm Harvest Season</strong>
+              <span id="detail-season">June to November</span>
+            </div>
+            <div class="spec-card">
+              <strong>Origin &amp; Soil</strong>
+              <span id="detail-soil">Compost-Enriched Gujarat Loam</span>
+            </div>
+            <div class="spec-card">
+              <strong>Primary Health Asset</strong>
+              <span id="detail-health">Cellular Antioxidants &amp; Iron</span>
+            </div>
+            <div class="spec-card">
+              <strong>Pesticide Status</strong>
+              <span>0% Synthetic Chemicals</span>
+            </div>
+          </div>
+
+          <div class="detail-actions">
+            <a href="https://wa.me/918320852144" target="_blank" rel="noopener" class="btn btn-whatsapp btn-xl" id="detail-wa-btn">
+              <i class="fa-brands fa-whatsapp"></i> Order on WhatsApp
+            </a>
+            <a href="tel:+918320852144" class="btn btn-call btn-xl">
+              <i class="fa-solid fa-phone"></i> Call Farm (8320852144)
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Detailed Tabs & Content -->
+  <section class="detail-tabs-section">
+    <div class="container">
+      <div class="info-card">
+        <h3><i class="fa-solid fa-heart-pulse"></i> Nutritional Value &amp; Health Assets</h3>
+        <div class="nutrition-list" id="detail-nutrition">
+          <!-- Rendered by JS -->
+        </div>
+      </div>
+
+      <div class="info-card">
+        <h3><i class="fa-solid fa-seedling"></i> Ethical Organic Farming Process</h3>
+        <p style="font-size: 15px; color: var(--txt-mid); line-height: 1.8;" id="detail-farming">
+          At Nature's Nest, our crops are grown in certified living soil enriched with farm-made cow-dung compost and leaf mulch. 
+          We employ bio-enzymes, neem oils, and beneficial insect habitats for pest defense. Drip lines feed targeted moisture directly to root zones, ensuring maximum nutrient uptake without runoff.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer" aria-label="Site footer">
+    <div class="footer-bottom">
+      <div class="container">
+        <p>&copy; 2024 Nature's Nest Organic Farm &bull; All rights reserved &bull; Grown with <i class="fa-solid fa-heart" style="color: #52b788;"></i> for Healthy Families</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/shared.js"></script>
+  <script src="js/chatbot.js"></script>
+  <script>
+    // Produce database
+    var produceDB = {
+      'dragon-fruit': {
+        name: 'Dragon Fruit (Pitaya)',
+        category: 'Exotic Fruit',
+        catLink: 'fruits.html',
+        botanical: 'Hylocereus undatus &bull; Local Kamalam',
+        img: 'images/dragon_fruit.jpg',
+        desc: 'Vibrant pink-skinned tropical superfruit with delicate white or magenta flesh studded with tiny nutritious black seeds. Loaded with betalains, soluble fibre, and bioavailable iron.',
+        season: 'June – November Peak',
+        soil: 'Gujarat Raised Beds &bull; High Organic Matter',
+        health: 'Immunity &bull; Cellular Detox &bull; Prebiotic Gut Care',
+        nutrition: [
+          { label: 'Betalain Antioxidants', note: 'Protects cells against oxidative damage' },
+          { label: 'Natural Iron', note: 'Assists hemoglobin synthesis' },
+          { label: 'Prebiotic Fibre', note: 'Promotes healthy gut microbiome' },
+          { label: 'Vitamin C Complex', note: 'Daily immune system reinforcement' }
+        ]
+      },
+      'sitafal': {
+        name: 'Sitafal (Custard Apple)',
+        category: 'Seasonal Fruit',
+        catLink: 'fruits.html',
+        botanical: 'Annona squamosa &bull; Sugar Apple',
+        img: 'images/sitafal.jpg',
+        desc: 'Velvety, creamy custard texture bursting with natural nectarous sugars. Hand-picked when soft-ripe for superior flavor and high magnesium, potassium, and B-complex vitamins.',
+        season: 'August – December',
+        soil: 'Naturally Drained Gujarat Orchard Slopes',
+        health: 'Heart Vitality &bull; Muscle Relaxation &bull; Natural Energy',
+        nutrition: [
+          { label: 'Magnesium', note: 'Supports cardiac and muscle function' },
+          { label: 'Potassium', note: 'Helps regulate blood pressure naturally' },
+          { label: 'Vitamin B6', note: 'Assists mood and neurotransmitter balance' },
+          { label: 'Natural Fructose', note: 'Clean bio-energy without spikes' }
+        ]
+      },
+      'guava': {
+        name: 'Guava (Amrood)',
+        category: 'Seasonal Fruit',
+        catLink: 'fruits.html',
+        botanical: 'Psidium guajava &bull; White & Pink Flesh',
+        img: 'images/guava.jpg',
+        desc: 'Crisp, intensely aromatic guavas cultivated without chemical sprays. Delivers 4x more Vitamin C than common citrus oranges alongside high pectin fibre.',
+        season: 'Year-Round &bull; Winter Peak',
+        soil: 'Compost-Rich Sandy Loam',
+        health: 'Immunity Defense &bull; Skin Glow &bull; Digestive Smoothness',
+        nutrition: [
+          { label: '4x Vitamin C', note: 'Highest immune barrier protection' },
+          { label: 'Dietary Pectin', note: 'Regulates cholesterol & digestion' },
+          { label: 'Lycopene', note: 'Protective carotenoid pigment' },
+          { label: 'Folate', note: 'Cellular repair and vitality' }
+        ]
+      },
+      'mango': {
+        name: 'Mango (Kesar &amp; Alphonso)',
+        category: 'King of Fruits',
+        catLink: 'fruits.html',
+        botanical: 'Mangifera indica &bull; Gir Kesar & Alphonso',
+        img: 'images/mango.jpg',
+        desc: 'The celebrated pride of Gujarat orchards! Naturally tree-ripened without hazardous calcium carbide. Rich in beta-carotene, Vitamin A, and intense fragrance.',
+        season: 'April – July',
+        soil: 'Gujarat Sunlit Native Basalt Soils',
+        health: 'Eye Health &bull; Skin Rejuvenation &bull; Natural Vitality',
+        nutrition: [
+          { label: 'Beta-Carotene', note: 'Converts to active Vitamin A for eyesight' },
+          { label: 'Digestive Amylases', note: 'Assists breakdown of complex carbs' },
+          { label: 'Vitamin C & Folate', note: 'Tissue renewal and cellular defense' },
+          { label: 'Polyphenols', note: 'Antioxidant shielding' }
+        ]
+      },
+      'moringa': {
+        name: 'Drumstick (Moringa / Sahjan)',
+        category: 'Superfood Vegetable',
+        catLink: 'vegetables.html',
+        botanical: 'Moringa oleifera &bull; Miracle Tree',
+        img: 'images/moringa.jpg',
+        desc: 'Nature’s most concentrated botanical superfood. Packed with bioavailable calcium, plant-based iron, essential amino acids, and anti-inflammatory isothiocyanates.',
+        season: 'Year-Round Harvest',
+        soil: 'Native Gujarat Soil with Bio-Compost',
+        health: 'Bone Density &bull; Joint Comfort &bull; Hemoglobin Support',
+        nutrition: [
+          { label: 'Bioavailable Calcium', note: 'Higher bone density support than milk' },
+          { label: 'Plant Iron', note: 'Natural blood booster without constipation' },
+          { label: 'Complete Amino Acids', note: 'All essential amino building blocks' },
+          { label: 'Quercetin & Chlorogenic Acid', note: 'Lowers systemic inflammation' }
+        ]
+      },
+      'spinach': {
+        name: 'Spinach (Palak)',
+        category: 'Leafy Green',
+        catLink: 'vegetables.html',
+        botanical: 'Spinacia oleracea &bull; Desi Palak',
+        img: 'images/spinach.jpg',
+        desc: 'Tender morning-cut organic spinach leaves harvested at sunrise. Filled with chlorophyll, iron, Vitamin K, and lutein for vision and cellular health.',
+        season: 'Daily Fresh Pick',
+        soil: 'Nitrogen-Enriched Compost Beds',
+        health: 'Blood Purity &bull; Vision Sharpness &bull; Bone Support',
+        nutrition: [
+          { label: 'Chlorophyll', note: 'Supports body cleansing & freshness' },
+          { label: 'Lutein & Zeaxanthin', note: 'Guards eyes against blue light stress' },
+          { label: 'Vitamin K1', note: 'Essential for healthy blood coagulation' },
+          { label: 'Dietary Folate', note: 'Promotes cellular DNA integrity' }
+        ]
+      },
+      'karela': {
+        name: 'Bitter Gourd (Karela)',
+        category: 'Medicinal Vegetable',
+        catLink: 'vegetables.html',
+        botanical: 'Momordica charantia &bull; Ayurvedic Bitter',
+        img: 'images/karela.jpg',
+        desc: 'Organically grown bitter gourd revered for blood sugar management, liver cleansing, and skin purification. Naturally healing and chemical-free.',
+        season: 'Daily Fresh Pick',
+        soil: 'Drip-Watered Trellis System',
+        health: 'Glycemic Balance &bull; Liver Detox &bull; Weight Care',
+        nutrition: [
+          { label: 'Charantin & Polypeptide-p', note: 'Supports natural insulin efficacy' },
+          { label: 'Hepato-Protective Compounds', note: 'Assists liver bile and filtering' },
+          { label: 'Vitamin C', note: 'High immune barrier activity' },
+          { label: 'Low Glycemic Load', note: 'Zero sugar burden' }
+        ]
+      }
+    };
+
+    // Parse URL parameter ?id=...
+    var urlParams = new URLSearchParams(window.location.search);
+    var currentId = urlParams.get('id') || 'dragon-fruit';
+    if (!produceDB[currentId]) currentId = 'dragon-fruit';
+
+    function renderProduce(id) {
+      var item = produceDB[id];
+      if (!item) return;
+
+      document.title = item.name + " | Nature's Nest Organic Farm";
+      document.getElementById('breadcrumb-category').textContent = item.category;
+      document.getElementById('breadcrumb-category').href = item.catLink;
+      document.getElementById('breadcrumb-title').textContent = item.name;
+
+      document.getElementById('detail-name').innerHTML = item.name;
+      document.getElementById('detail-botanical').innerHTML = item.botanical;
+      document.getElementById('detail-desc').innerHTML = item.desc;
+      document.getElementById('detail-img').src = item.img;
+      document.getElementById('detail-img').alt = item.name;
+      document.getElementById('detail-season').textContent = item.season;
+      document.getElementById('detail-soil').innerHTML = item.soil;
+      document.getElementById('detail-health').innerHTML = item.health;
+
+      // Update WhatsApp link
+      var waMsg = "Hello Nature's Nest! I want to order fresh organic " + item.name + " from Gujarat.";
+      document.getElementById('detail-wa-btn').href = "https://wa.me/918320852144?text=" + encodeURIComponent(waMsg);
+
+      // Render nutrition
+      var nutContainer = document.getElementById('detail-nutrition');
+      nutContainer.innerHTML = '';
+      item.nutrition.forEach(function(n) {
+        var div = document.createElement('div');
+        div.className = 'nutrition-item';
+        div.innerHTML = '<b>' + n.label + '</b><small>' + n.note + '</small>';
+        nutContainer.appendChild(div);
+      });
+
+      // Update selector buttons
+      document.querySelectorAll('.produce-select-btn').forEach(function(b) {
+        b.classList.toggle('active', b.dataset.id === id);
+      });
+    }
+
+    // Render quick selector buttons
+    var selectorBar = document.getElementById('selector-bar');
+    Object.keys(produceDB).forEach(function(k) {
+      var btn = document.createElement('button');
+      btn.className = 'produce-select-btn' + (k === currentId ? ' active' : '');
+      btn.dataset.id = k;
+      btn.innerHTML = '<i class="fa-solid fa-leaf"></i> ' + produceDB[k].name.split(' (')[0];
+      btn.addEventListener('click', function() {
+        renderProduce(k);
+        history.pushState(null, '', 'product-detail.html?id=' + k);
+      });
+      selectorBar.appendChild(btn);
+    });
+
+    renderProduce(currentId);
+  </script>
+</body>
+</html>

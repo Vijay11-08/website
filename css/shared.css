@@ -10,6 +10,14 @@
 }
 
 :root {
+  /* Default Organic Theme (Balanced Nature) */
+  --theme-primary: #1b4332;
+  --theme-secondary: #2d6a4f;
+  --theme-accent: #52b788;
+  --theme-highlight: #f9c74f;
+  --theme-glow: rgba(82, 183, 136, 0.25);
+  --theme-hero-overlay: linear-gradient(135deg, rgba(7, 26, 18, 0.92) 0%, rgba(13, 43, 30, 0.78) 55%, rgba(27, 67, 50, 0.65) 100%);
+
   /* Organic Greens Palette */
   --g950: #071a12;
   --g900: #0d2b1e;
@@ -30,8 +38,6 @@
   --wa-d:    #128c7e;
   --call:    #3b82f6;
   --call-d:  #1d4ed8;
-  --purple:  #8b5cf6;
-  --red:     #ef4444;
 
   /* Typography & Surfaces */
   --txt-dark:  #0f172a;
@@ -63,6 +69,29 @@
   --t-slow: all 0.6s var(--ease);
 }
 
+/* ════ DUAL THEME OVERRIDES ════ */
+body.theme-fruits {
+  --theme-primary: #9d0208;
+  --theme-secondary: #dc2f02;
+  --theme-accent: #f48c06;
+  --theme-highlight: #faa307;
+  --theme-glow: rgba(244, 140, 6, 0.3);
+  --theme-hero-overlay: linear-gradient(135deg, rgba(60, 9, 14, 0.92) 0%, rgba(106, 4, 15, 0.8) 55%, rgba(157, 2, 8, 0.65) 100%);
+  --bg-light: #fffcf8;
+  --bg-alt: #fdf5ea;
+}
+
+body.theme-vegetables {
+  --theme-primary: #132a13;
+  --theme-secondary: #31572c;
+  --theme-accent: #4f772d;
+  --theme-highlight: #90a955;
+  --theme-glow: rgba(79, 119, 45, 0.28);
+  --theme-hero-overlay: linear-gradient(135deg, rgba(7, 26, 18, 0.94) 0%, rgba(19, 42, 19, 0.85) 55%, rgba(49, 87, 44, 0.7) 100%);
+  --bg-light: #f6fbf7;
+  --bg-alt: #ebf5ee;
+}
+
 html {
   scroll-behavior: smooth;
   font-size: 16px;
@@ -75,6 +104,7 @@ body {
   line-height: 1.65;
   overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
+  transition: background-color 0.4s var(--ease), color 0.4s var(--ease);
 }
 
 a { text-decoration: none; color: inherit; }
@@ -100,7 +130,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 .page-loader {
   position: fixed;
   inset: 0;
-  background: var(--g900);
+  background: var(--g950);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -121,8 +151,8 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   gap: 16px;
 }
 .loader-icon {
-  width: 70px;
-  height: 70px;
+  width: 72px;
+  height: 72px;
   border-radius: var(--r-full);
   background: linear-gradient(135deg, rgba(82,183,136,0.25), rgba(249,199,79,0.2));
   border: 1px solid rgba(255,255,255,0.2);
@@ -135,7 +165,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 }
 @keyframes loaderPulse {
   from { transform: scale(0.95); box-shadow: 0 0 0 rgba(116,198,157,0); }
-  to   { transform: scale(1.08); box-shadow: 0 0 24px rgba(116,198,157,0.4); }
+  to   { transform: scale(1.08); box-shadow: 0 0 26px rgba(116,198,157,0.45); }
 }
 .loader-bar {
   width: 220px;
@@ -158,7 +188,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   font-size: 13px;
   color: rgba(255,255,255,0.75);
   letter-spacing: 0.5px;
-  font-weight: 500;
+  font-weight: 600;
 }
 
 /* ════════════════════════════════
@@ -170,7 +200,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   left: 0;
   height: 3px;
   width: 0%;
-  background: linear-gradient(90deg, var(--g500), var(--wa), var(--gold));
+  background: linear-gradient(90deg, var(--theme-accent), var(--wa), var(--theme-highlight));
   z-index: 9999;
   transition: width 0.1s linear;
 }
@@ -202,9 +232,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   transition: var(--t-mid);
   white-space: nowrap;
 }
-.fab-btn i {
-  font-size: 20px;
-}
+.fab-btn i { font-size: 20px; }
 .fab-btn:hover {
   transform: translateY(-4px) scale(1.03);
   box-shadow: var(--sh-lg);
@@ -223,7 +251,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   transition: var(--t-mid);
 }
 .header.scrolled {
-  background: rgba(255, 255, 255, 0.94);
+  background: rgba(255, 255, 255, 0.95);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
   box-shadow: 0 4px 20px rgba(13, 43, 30, 0.08);
@@ -237,7 +265,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 20px;
+  gap: 16px;
 }
 
 /* Brand Logo */
@@ -284,30 +312,52 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 .nav-links {
   display: flex;
   align-items: center;
-  gap: 6px;
+  gap: 4px;
 }
 .nav-link {
   display: inline-flex;
   align-items: center;
-  gap: 8px;
-  padding: 8px 16px;
-  font-size: 14px;
+  gap: 7px;
+  padding: 8px 14px;
+  font-size: 13.5px;
   font-weight: 600;
   color: var(--txt-mid);
   border-radius: var(--r-sm);
   transition: var(--t-fast);
 }
-.nav-link i { font-size: 14px; color: var(--g600); }
+.nav-link i { font-size: 13px; color: var(--g600); }
 .nav-link:hover, .nav-link.active {
   color: var(--g900);
   background: var(--g100);
 }
 .nav-link.active i { color: var(--g800); }
 
+/* Theme Switcher Toggle Pill */
+.theme-switch-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 12px;
+  border-radius: var(--r-full);
+  background: var(--bg-alt);
+  border: 1px solid rgba(82, 183, 136, 0.3);
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--g800);
+  cursor: pointer;
+  transition: var(--t-fast);
+  margin-left: 6px;
+}
+.theme-switch-btn:hover {
+  background: var(--g800);
+  color: #fff;
+}
+.theme-switch-btn i { color: var(--gold); }
+
 .nav-cta {
   background: linear-gradient(135deg, var(--g600), var(--g800));
   color: white !important;
-  padding: 10px 20px;
+  padding: 9px 18px;
   border-radius: var(--r-full);
   font-weight: 700;
   font-size: 13px;
@@ -316,7 +366,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   gap: 8px;
   box-shadow: 0 4px 16px rgba(45, 106, 79, 0.3);
   transition: var(--t-mid);
-  margin-left: 10px;
+  margin-left: 6px;
 }
 .nav-cta i { font-size: 13px; color: var(--gold); }
 .nav-cta:hover {
@@ -363,13 +413,13 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 .btn i { font-size: 15px; }
 
 .btn-primary {
-  background: linear-gradient(135deg, var(--g600), var(--g800));
+  background: linear-gradient(135deg, var(--theme-secondary), var(--theme-primary));
   color: white;
-  box-shadow: 0 4px 20px rgba(45, 106, 79, 0.35);
+  box-shadow: 0 4px 20px var(--theme-glow);
 }
 .btn-primary:hover {
   transform: translateY(-2px);
-  box-shadow: 0 8px 30px rgba(45, 106, 79, 0.45);
+  box-shadow: 0 8px 30px var(--theme-glow);
 }
 
 .btn-whatsapp {

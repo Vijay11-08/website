@@ -5,6 +5,53 @@
 (function() {
 'use strict';
 
+/* ── DUAL THEME CONTROLLER ── */
+var themes = ['default', 'fruits', 'vegetables'];
+var themeLabels = {
+  'default': '<i class="fa-solid fa-leaf"></i> Nature Blend',
+  'fruits': '<i class="fa-solid fa-apple-whole"></i> Fruits Theme',
+  'vegetables': '<i class="fa-solid fa-carrot"></i> Veg Theme'
+};
+
+var savedTheme = localStorage.getItem('nature_nest_theme') || 'default';
+applyTheme(savedTheme);
+
+function applyTheme(themeName) {
+  document.body.classList.remove('theme-fruits', 'theme-vegetables');
+  if (themeName === 'fruits') {
+    document.body.classList.add('theme-fruits');
+  } else if (themeName === 'vegetables') {
+    document.body.classList.add('theme-vegetables');
+  }
+  localStorage.setItem('nature_nest_theme', themeName);
+
+  var btn = document.getElementById('theme-toggle-btn');
+  if (btn) {
+    btn.innerHTML = themeLabels[themeName] || themeLabels['default'];
+  }
+}
+
+function cycleTheme() {
+  var current = localStorage.getItem('nature_nest_theme') || 'default';
+  var idx = themes.indexOf(current);
+  var nextTheme = themes[(idx + 1) % themes.length];
+  applyTheme(nextTheme);
+}
+
+// Inject Theme Toggle Button in Navbar if present
+window.addEventListener('DOMContentLoaded', function() {
+  var navLinks = document.getElementById('nav-links');
+  if (navLinks && !document.getElementById('theme-toggle-btn')) {
+    var themeBtn = document.createElement('button');
+    themeBtn.id = 'theme-toggle-btn';
+    themeBtn.className = 'theme-switch-btn';
+    themeBtn.setAttribute('aria-label', 'Switch Fruit & Vegetable Theme');
+    themeBtn.innerHTML = themeLabels[savedTheme] || themeLabels['default'];
+    themeBtn.addEventListener('click', cycleTheme);
+    navLinks.insertBefore(themeBtn, navLinks.querySelector('.nav-cta'));
+  }
+});
+
 /* ── PAGE LOADER DISMISS ── */
 window.addEventListener('load', function() {
   setTimeout(function() {
@@ -132,6 +179,6 @@ document.querySelectorAll('.nav-link').forEach(function(link) {
   }
 });
 
-console.log("[Nature's Nest] Shared assets initialized successfully.");
+console.log("[Nature's Nest] Shared assets initialized successfully with dual theme controller.");
 
 })();

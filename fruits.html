@@ -27,14 +27,14 @@
     "name": "Organic Fruits at Nature's Nest Farm",
     "description": "100% organic exotic and seasonal fruits grown pesticide-free in Gujarat, India.",
     "itemListElement": [
-      { "@type": "ListItem", "position": 1, "name": "Dragon Fruit", "url": "fruits.html#dragon" },
-      { "@type": "ListItem", "position": 2, "name": "Guava (Amrood)", "url": "fruits.html#guava" },
-      { "@type": "ListItem", "position": 3, "name": "Sitafal (Custard Apple)", "url": "fruits.html#sitafal" },
-      { "@type": "ListItem", "position": 4, "name": "Mango Kesar Alphonso", "url": "fruits.html#mango" },
-      { "@type": "ListItem", "position": 5, "name": "Passion Fruit", "url": "fruits.html#passion" },
-      { "@type": "ListItem", "position": 6, "name": "Star Fruit Carambola", "url": "fruits.html#starfruit" },
-      { "@type": "ListItem", "position": 7, "name": "Jamun Black Plum", "url": "fruits.html#jamun" },
-      { "@type": "ListItem", "position": 8, "name": "Papaya", "url": "fruits.html#papaya" }
+      { "@type": "ListItem", "position": 1, "name": "Dragon Fruit", "url": "product-detail.html?id=dragon-fruit" },
+      { "@type": "ListItem", "position": 2, "name": "Guava (Amrood)", "url": "product-detail.html?id=guava" },
+      { "@type": "ListItem", "position": 3, "name": "Sitafal (Custard Apple)", "url": "product-detail.html?id=sitafal" },
+      { "@type": "ListItem", "position": 4, "name": "Mango Kesar Alphonso", "url": "product-detail.html?id=mango" },
+      { "@type": "ListItem", "position": 5, "name": "Passion Fruit", "url": "product-detail.html?id=passion-fruit" },
+      { "@type": "ListItem", "position": 6, "name": "Star Fruit Carambola", "url": "product-detail.html?id=star-fruit" },
+      { "@type": "ListItem", "position": 7, "name": "Jamun Black Plum", "url": "product-detail.html?id=jamun" },
+      { "@type": "ListItem", "position": 8, "name": "Papaya", "url": "product-detail.html?id=papaya" }
     ]
   }
   </script>
@@ -49,9 +49,10 @@
 
   <!-- ═══ STYLESHEETS ═══ -->
   <link rel="stylesheet" href="css/shared.css" />
+  <link rel="stylesheet" href="css/chatbot.css" />
   <link rel="stylesheet" href="css/products.css" />
 </head>
-<body class="fruits-page">
+<body class="fruits-page theme-fruits">
 
   <!-- ══ PAGE LOADER ══ -->
   <div class="page-loader" id="page-loader">
@@ -93,8 +94,8 @@
         <a href="index.html" class="nav-link" id="nl-home"><i class="fa-solid fa-house"></i> Home</a>
         <a href="fruits.html" class="nav-link active" id="nl-fruits"><i class="fa-solid fa-apple-whole"></i> Fruits</a>
         <a href="vegetables.html" class="nav-link" id="nl-veg"><i class="fa-solid fa-carrot"></i> Vegetables</a>
-        <a href="index.html#about" class="nav-link" id="nl-about"><i class="fa-solid fa-circle-info"></i> Our Story</a>
-        <a href="index.html#contact" class="nav-link" id="nl-contact"><i class="fa-solid fa-map-location-dot"></i> Visit Us</a>
+        <a href="about.html" class="nav-link" id="nl-about"><i class="fa-solid fa-circle-info"></i> Our Story</a>
+        <a href="contact.html" class="nav-link" id="nl-contact"><i class="fa-solid fa-map-location-dot"></i> Visit Us</a>
         <a href="tel:+918320852144" class="nav-cta" id="nl-call">
           <i class="fa-solid fa-phone"></i> +91 83208 52144
         </a>
@@ -157,16 +158,15 @@
 
         <!-- 1. DRAGON FRUIT -->
         <article class="prod-card" id="dragon" data-category="exotic superfood" aria-label="Dragon Fruit">
-          <div class="prod-img-wrap">
-            <img src="https://images.unsplash.com/photo-1527325678964-54921661f888?auto=format&fit=crop&w=700&q=80" 
-                 alt="Organic Dragon Fruit grown in Gujarat" class="prod-photo" loading="lazy" />
+          <a href="product-detail.html?id=dragon-fruit" class="prod-img-wrap" aria-label="View Dragon Fruit details">
+            <img src="images/dragon_fruit.jpg" alt="Organic Dragon Fruit grown in Gujarat" class="prod-photo" loading="lazy" />
             <div class="prod-badges">
               <span class="pbadge exotic"><i class="fa-solid fa-wand-magic-sparkles"></i> Exotic</span>
               <span class="pbadge superfood"><i class="fa-solid fa-bolt"></i> Superfood</span>
             </div>
-          </div>
+          </a>
           <div class="prod-body">
-            <h2 class="prod-name">Dragon Fruit (Pitaya)</h2>
+            <h2 class="prod-name"><a href="product-detail.html?id=dragon-fruit">Dragon Fruit (Pitaya)</a></h2>
             <p class="prod-desc">
               Vibrant magenta skin with crisp, mildly sweet speckled flesh. Abundant in betalain antioxidants, prebiotic fibre, Vitamin C, and bioavailable iron.
             </p>
@@ -181,8 +181,8 @@
                  class="prod-wa-btn" target="_blank" rel="noopener" id="order-dragon">
                 <i class="fa-brands fa-whatsapp"></i> Order Now
               </a>
-              <a href="tel:+918320852144" class="prod-call-btn" aria-label="Call to order Dragon Fruit">
-                <i class="fa-solid fa-phone"></i>
+              <a href="product-detail.html?id=dragon-fruit" class="prod-call-btn" title="View Full Profile">
+                <i class="fa-solid fa-circle-info"></i>
               </a>
             </div>
           </div>
@@ -190,16 +190,15 @@
 
         <!-- 2. GUAVA -->
         <article class="prod-card" id="guava" data-category="seasonal" aria-label="Guava">
-          <div class="prod-img-wrap">
-            <img src="https://images.unsplash.com/photo-1536511135898-0e628469956d?auto=format&fit=crop&w=700&q=80" 
-                 alt="Organic Guava Amrood fresh from farm" class="prod-photo" loading="lazy" />
+          <a href="product-detail.html?id=guava" class="prod-img-wrap" aria-label="View Guava details">
+            <img src="images/guava.jpg" alt="Organic Guava Amrood fresh from farm" class="prod-photo" loading="lazy" />
             <div class="prod-badges">
               <span class="pbadge seasonal"><i class="fa-solid fa-sun"></i> Seasonal</span>
               <span class="pbadge organic"><i class="fa-solid fa-certificate"></i> Organic</span>
             </div>
-          </div>
+          </a>
           <div class="prod-body">
-            <h2 class="prod-name">Guava (Amrood)</h2>
+            <h2 class="prod-name"><a href="product-detail.html?id=guava">Guava (Amrood)</a></h2>
             <p class="prod-desc">
               Crisp, intensely aromatic farm-grown guavas with naturally balanced sweet-tangy flavor. Free of pesticide sprays, delivering supreme immunity support.
             </p>
@@ -213,8 +212,8 @@
                  class="prod-wa-btn" target="_blank" rel="noopener" id="order-guava">
                 <i class="fa-brands fa-whatsapp"></i> Order Now
               </a>
-              <a href="tel:+918320852144" class="prod-call-btn" aria-label="Call to order Guava">
-                <i class="fa-solid fa-phone"></i>
+              <a href="product-detail.html?id=guava" class="prod-call-btn" title="View Full Profile">
+                <i class="fa-solid fa-circle-info"></i>
               </a>
             </div>
           </div>
@@ -222,16 +221,15 @@
 
         <!-- 3. SITAFAL -->
         <article class="prod-card featured-card" id="sitafal" data-category="seasonal" aria-label="Sitafal Custard Apple">
-          <div class="prod-img-wrap">
-            <img src="https://images.unsplash.com/photo-1615485290382-441e4d049cb5?auto=format&fit=crop&w=700&q=80" 
-                 alt="Organic Sitafal Custard Apple hand-picked in Gujarat" class="prod-photo" loading="lazy" />
+          <a href="product-detail.html?id=sitafal" class="prod-img-wrap" aria-label="View Sitafal details">
+            <img src="images/sitafal.jpg" alt="Organic Sitafal Custard Apple hand-picked in Gujarat" class="prod-photo" loading="lazy" />
             <div class="prod-badges">
               <span class="pbadge popular"><i class="fa-solid fa-star"></i> Most Popular</span>
               <span class="pbadge seasonal"><i class="fa-solid fa-sun"></i> Seasonal</span>
             </div>
-          </div>
+          </a>
           <div class="prod-body">
-            <h2 class="prod-name">Sitafal (Custard Apple)</h2>
+            <h2 class="prod-name"><a href="product-detail.html?id=sitafal">Sitafal (Custard Apple)</a></h2>
             <p class="prod-desc">
               Velvety, creamy custard texture bursting with natural fructose. Hand-harvested when ripe for lush flavor and high magnesium, potassium, and B-complex vitamins.
             </p>
@@ -246,8 +244,8 @@
                  class="prod-wa-btn" target="_blank" rel="noopener" id="order-sitafal">
                 <i class="fa-brands fa-whatsapp"></i> Order Now
               </a>
-              <a href="tel:+918320852144" class="prod-call-btn" aria-label="Call to order Sitafal">
-                <i class="fa-solid fa-phone"></i>
+              <a href="product-detail.html?id=sitafal" class="prod-call-btn" title="View Full Profile">
+                <i class="fa-solid fa-circle-info"></i>
               </a>
             </div>
           </div>
@@ -255,16 +253,15 @@
 
         <!-- 4. MANGO -->
         <article class="prod-card" id="mango" data-category="seasonal superfood" aria-label="Mango">
-          <div class="prod-img-wrap">
-            <img src="https://images.unsplash.com/photo-1553279768-865429fa0078?auto=format&fit=crop&w=700&q=80" 
-                 alt="Organic Kesar and Alphonso Mangoes" class="prod-photo" loading="lazy" />
+          <a href="product-detail.html?id=mango" class="prod-img-wrap" aria-label="View Mango details">
+            <img src="images/mango.jpg" alt="Organic Kesar and Alphonso Mangoes" class="prod-photo" loading="lazy" />
             <div class="prod-badges">
               <span class="pbadge seasonal"><i class="fa-solid fa-sun"></i> Seasonal</span>
               <span class="pbadge superfood"><i class="fa-solid fa-crown"></i> King of Fruits</span>
             </div>
-          </div>
+          </a>
           <div class="prod-body">
-            <h2 class="prod-name">Mango (Kesar &amp; Alphonso)</h2>
+            <h2 class="prod-name"><a href="product-detail.html?id=mango">Mango (Kesar &amp; Alphonso)</a></h2>
             <p class="prod-desc">
               The celebrated pride of Gujarat orchards! Naturally tree-ripened without harmful calcium carbide or artificial chemicals. Rich in Vitamin A, beta-carotene, and nectarous aroma.
             </p>
@@ -279,8 +276,8 @@
                  class="prod-wa-btn" target="_blank" rel="noopener" id="order-mango">
                 <i class="fa-brands fa-whatsapp"></i> Order Now
               </a>
-              <a href="tel:+918320852144" class="prod-call-btn" aria-label="Call to order Mango">
-                <i class="fa-solid fa-phone"></i>
+              <a href="product-detail.html?id=mango" class="prod-call-btn" title="View Full Profile">
+                <i class="fa-solid fa-circle-info"></i>
               </a>
             </div>
           </div>
@@ -288,13 +285,12 @@
 
         <!-- 5. PASSION FRUIT -->
         <article class="prod-card" id="passion" data-category="exotic" aria-label="Passion Fruit">
-          <div class="prod-img-wrap">
-            <img src="https://images.unsplash.com/photo-1596040033229-a9821ebd058d?auto=format&fit=crop&w=700&q=80" 
-                 alt="Organic Passion Fruit sliced fresh" class="prod-photo" loading="lazy" />
+          <a href="product-detail.html?id=dragon-fruit" class="prod-img-wrap" aria-label="View Passion Fruit details">
+            <img src="images/passion_fruit.jpg" alt="Organic Passion Fruit sliced fresh" class="prod-photo" loading="lazy" />
             <div class="prod-badges">
               <span class="pbadge exotic"><i class="fa-solid fa-wand-magic-sparkles"></i> Rare Exotic</span>
             </div>
-          </div>
+          </a>
           <div class="prod-body">
             <h2 class="prod-name">Passion Fruit</h2>
             <p class="prod-desc">
@@ -319,13 +315,12 @@
 
         <!-- 6. STAR FRUIT -->
         <article class="prod-card" id="starfruit" data-category="exotic" aria-label="Star Fruit Carambola">
-          <div class="prod-img-wrap">
-            <img src="https://images.unsplash.com/photo-1587132137056-bfbf0166836e?auto=format&fit=crop&w=700&q=80" 
-                 alt="Crisp Organic Star Fruit Carambola" class="prod-photo" loading="lazy" />
+          <a href="product-detail.html?id=dragon-fruit" class="prod-img-wrap" aria-label="View Star Fruit details">
+            <img src="images/star_fruit.jpg" alt="Crisp Organic Star Fruit Carambola" class="prod-photo" loading="lazy" />
             <div class="prod-badges">
               <span class="pbadge exotic"><i class="fa-solid fa-wand-magic-sparkles"></i> Exotic</span>
             </div>
-          </div>
+          </a>
           <div class="prod-body">
             <h2 class="prod-name">Star Fruit (Carambola)</h2>
             <p class="prod-desc">
@@ -350,14 +345,13 @@
 
         <!-- 7. JAMUN -->
         <article class="prod-card" id="jamun" data-category="seasonal superfood" aria-label="Jamun Black Plum">
-          <div class="prod-img-wrap">
-            <img src="https://images.unsplash.com/photo-1567306226416-28f0efdc88ce?auto=format&fit=crop&w=700&q=80" 
-                 alt="Organic Jamun Black Plum fruit" class="prod-photo" loading="lazy" />
+          <a href="product-detail.html?id=dragon-fruit" class="prod-img-wrap" aria-label="View Jamun details">
+            <img src="images/jamun.jpg" alt="Organic Jamun Black Plum fruit" class="prod-photo" loading="lazy" />
             <div class="prod-badges">
               <span class="pbadge seasonal"><i class="fa-solid fa-sun"></i> Seasonal</span>
               <span class="pbadge medicinal"><i class="fa-solid fa-heart-pulse"></i> Medicinal</span>
             </div>
-          </div>
+          </a>
           <div class="prod-body">
             <h2 class="prod-name">Jamun (Black Plum)</h2>
             <p class="prod-desc">
@@ -382,14 +376,13 @@
 
         <!-- 8. PAPAYA -->
         <article class="prod-card" id="papaya" data-category="superfood" aria-label="Papaya">
-          <div class="prod-img-wrap">
-            <img src="https://images.unsplash.com/photo-1617112848923-cc2234396a8d?auto=format&fit=crop&w=700&q=80" 
-                 alt="Organic Papaya tree-ripened" class="prod-photo" loading="lazy" />
+          <a href="product-detail.html?id=dragon-fruit" class="prod-img-wrap" aria-label="View Papaya details">
+            <img src="images/papaya.jpg" alt="Organic Papaya tree-ripened" class="prod-photo" loading="lazy" />
             <div class="prod-badges">
               <span class="pbadge superfood"><i class="fa-solid fa-bolt"></i> Superfood</span>
               <span class="pbadge organic"><i class="fa-solid fa-certificate"></i> Organic</span>
             </div>
-          </div>
+          </a>
           <div class="prod-body">
             <h2 class="prod-name">Papaya</h2>
             <p class="prod-desc">
@@ -460,10 +453,10 @@
           <div class="footer-col">
             <h5>All Fruits</h5>
             <ul>
-              <li><a href="#dragon">Dragon Fruit</a></li>
-              <li><a href="#guava">Guava (Amrood)</a></li>
-              <li><a href="#sitafal">Sitafal (Custard Apple)</a></li>
-              <li><a href="#mango">Mango (Kesar &amp; Alphonso)</a></li>
+              <li><a href="product-detail.html?id=dragon-fruit">Dragon Fruit</a></li>
+              <li><a href="product-detail.html?id=guava">Guava (Amrood)</a></li>
+              <li><a href="product-detail.html?id=sitafal">Sitafal (Custard Apple)</a></li>
+              <li><a href="product-detail.html?id=mango">Mango (Kesar &amp; Alphonso)</a></li>
               <li><a href="#passion">Passion Fruit</a></li>
               <li><a href="#starfruit">Star Fruit</a></li>
               <li><a href="#jamun">Jamun</a></li>
@@ -476,8 +469,8 @@
               <li><a href="index.html">Home</a></li>
               <li><a href="fruits.html">Organic Fruits</a></li>
               <li><a href="vegetables.html">Organic Vegetables</a></li>
-              <li><a href="index.html#about">Our Story</a></li>
-              <li><a href="index.html#contact">Contact &amp; Directions</a></li>
+              <li><a href="about.html">Our Story</a></li>
+              <li><a href="contact.html">Contact &amp; Directions</a></li>
             </ul>
           </div>
           <div class="footer-col">
@@ -501,6 +494,7 @@
 
   <!-- ══ SCRIPTS ══ -->
   <script src="js/shared.js"></script>
+  <script src="js/chatbot.js"></script>
   <script src="js/products.js"></script>
 </body>
 </html>

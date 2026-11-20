@@ -27,10 +27,10 @@
     "name": "Organic Vegetables at Nature's Nest Farm",
     "description": "100% organic, pesticide-free fresh vegetables grown daily in Gujarat, India.",
     "itemListElement": [
-      { "@type": "ListItem", "position": 1, "name": "Spinach (Palak)", "url": "vegetables.html#spinach" },
-      { "@type": "ListItem", "position": 2, "name": "Bitter Gourd (Karela)", "url": "vegetables.html#karela" },
+      { "@type": "ListItem", "position": 1, "name": "Spinach (Palak)", "url": "product-detail.html?id=spinach" },
+      { "@type": "ListItem", "position": 2, "name": "Bitter Gourd (Karela)", "url": "product-detail.html?id=karela" },
       { "@type": "ListItem", "position": 3, "name": "Okra (Bhindi)", "url": "vegetables.html#bhindi" },
-      { "@type": "ListItem", "position": 4, "name": "Drumstick (Moringa Sahjan)", "url": "vegetables.html#moringa" },
+      { "@type": "ListItem", "position": 4, "name": "Drumstick (Moringa Sahjan)", "url": "product-detail.html?id=moringa" },
       { "@type": "ListItem", "position": 5, "name": "Brinjal (Baingan)", "url": "vegetables.html#brinjal" },
       { "@type": "ListItem", "position": 6, "name": "Tomatoes", "url": "vegetables.html#tomato" },
       { "@type": "ListItem", "position": 7, "name": "Fenugreek (Methi)", "url": "vegetables.html#methi" },
@@ -53,9 +53,10 @@
 
   <!-- ═══ STYLESHEETS ═══ -->
   <link rel="stylesheet" href="css/shared.css" />
+  <link rel="stylesheet" href="css/chatbot.css" />
   <link rel="stylesheet" href="css/products.css" />
 </head>
-<body class="veg-page">
+<body class="veg-page theme-vegetables">
 
   <!-- ══ PAGE LOADER ══ -->
   <div class="page-loader" id="page-loader">
@@ -97,8 +98,8 @@
         <a href="index.html" class="nav-link" id="nl-home"><i class="fa-solid fa-house"></i> Home</a>
         <a href="fruits.html" class="nav-link" id="nl-fruits"><i class="fa-solid fa-apple-whole"></i> Fruits</a>
         <a href="vegetables.html" class="nav-link active" id="nl-veg"><i class="fa-solid fa-carrot"></i> Vegetables</a>
-        <a href="index.html#about" class="nav-link" id="nl-about"><i class="fa-solid fa-circle-info"></i> Our Story</a>
-        <a href="index.html#contact" class="nav-link" id="nl-contact"><i class="fa-solid fa-map-location-dot"></i> Visit Us</a>
+        <a href="about.html" class="nav-link" id="nl-about"><i class="fa-solid fa-circle-info"></i> Our Story</a>
+        <a href="contact.html" class="nav-link" id="nl-contact"><i class="fa-solid fa-map-location-dot"></i> Visit Us</a>
         <a href="tel:+918320852144" class="nav-cta" id="nl-call">
           <i class="fa-solid fa-phone"></i> +91 83208 52144
         </a>
@@ -162,16 +163,15 @@
 
         <!-- 1. SPINACH -->
         <article class="prod-card" id="spinach" data-category="leafy daily" aria-label="Spinach Palak">
-          <div class="prod-img-wrap">
-            <img src="https://images.unsplash.com/photo-1576045057995-568f588f82fb?auto=format&fit=crop&w=700&q=80" 
-                 alt="Fresh Organic Spinach Palak leaves" class="prod-photo" loading="lazy" />
+          <a href="product-detail.html?id=spinach" class="prod-img-wrap" aria-label="View Spinach profile">
+            <img src="images/spinach.jpg" alt="Fresh Organic Spinach Palak leaves" class="prod-photo" loading="lazy" />
             <div class="prod-badges">
               <span class="pbadge daily"><i class="fa-solid fa-calendar-check"></i> Daily Fresh</span>
               <span class="pbadge leafy"><i class="fa-solid fa-leaf"></i> Leafy Green</span>
             </div>
-          </div>
+          </a>
           <div class="prod-body">
-            <h2 class="prod-name">Spinach (Palak)</h2>
+            <h2 class="prod-name"><a href="product-detail.html?id=spinach">Spinach (Palak)</a></h2>
             <p class="prod-desc">
               Tender, deep green organic spinach cut fresh at dawn. Exceptionally rich in iron, Vitamin K, lutein, and dietary folate. Perfect for curries, dal, and cold-pressed juices.
             </p>
@@ -185,23 +185,22 @@
                  class="prod-wa-btn" target="_blank" rel="noopener" id="order-spinach">
                 <i class="fa-brands fa-whatsapp"></i> Order Now
               </a>
-              <a href="tel:+918320852144" class="prod-call-btn" aria-label="Call to order Spinach"><i class="fa-solid fa-phone"></i></a>
+              <a href="product-detail.html?id=spinach" class="prod-call-btn" title="View Full Profile"><i class="fa-solid fa-circle-info"></i></a>
             </div>
           </div>
         </article>
 
         <!-- 2. KARELA -->
         <article class="prod-card" id="karela" data-category="medicinal" aria-label="Bitter Gourd Karela">
-          <div class="prod-img-wrap">
-            <img src="https://images.unsplash.com/photo-1615485290382-441e4d049cb5?auto=format&fit=crop&w=700&q=80" 
-                 alt="Organic Bitter Gourd Karela" class="prod-photo" loading="lazy" />
+          <a href="product-detail.html?id=karela" class="prod-img-wrap" aria-label="View Karela profile">
+            <img src="images/karela.jpg" alt="Organic Bitter Gourd Karela" class="prod-photo" loading="lazy" />
             <div class="prod-badges">
               <span class="pbadge medicinal"><i class="fa-solid fa-heart-pulse"></i> Medicinal</span>
               <span class="pbadge superfood"><i class="fa-solid fa-shield-halved"></i> Healing</span>
             </div>
-          </div>
+          </a>
           <div class="prod-body">
-            <h2 class="prod-name">Bitter Gourd (Karela)</h2>
+            <h2 class="prod-name"><a href="product-detail.html?id=karela">Bitter Gourd (Karela)</a></h2>
             <p class="prod-desc">
               Organically grown bitter gourd revered for regulating blood sugar and supporting liver detoxification. 100% natural, unadulterated healing vegetable.
             </p>
@@ -215,7 +214,7 @@
                  class="prod-wa-btn" target="_blank" rel="noopener" id="order-karela">
                 <i class="fa-brands fa-whatsapp"></i> Order Now
               </a>
-              <a href="tel:+918320852144" class="prod-call-btn" aria-label="Call to order Karela"><i class="fa-solid fa-phone"></i></a>
+              <a href="product-detail.html?id=karela" class="prod-call-btn" title="View Full Profile"><i class="fa-solid fa-circle-info"></i></a>
             </div>
           </div>
         </article>
@@ -223,8 +222,7 @@
         <!-- 3. BHINDI -->
         <article class="prod-card" id="bhindi" data-category="daily" aria-label="Okra Bhindi">
           <div class="prod-img-wrap">
-            <img src="https://images.unsplash.com/photo-1425543103986-22abb7d7e8d2?auto=format&fit=crop&w=700&q=80" 
-                 alt="Tender Organic Okra Bhindi" class="prod-photo" loading="lazy" />
+            <img src="images/bhindi.jpg" alt="Tender Organic Okra Bhindi" class="prod-photo" loading="lazy" />
             <div class="prod-badges">
               <span class="pbadge daily"><i class="fa-solid fa-calendar-check"></i> Daily Fresh</span>
               <span class="pbadge organic"><i class="fa-solid fa-certificate"></i> Organic</span>
@@ -252,16 +250,15 @@
 
         <!-- 4. MORINGA -->
         <article class="prod-card featured-card" id="moringa" data-category="superfood medicinal" aria-label="Moringa Drumstick Sahjan">
-          <div class="prod-img-wrap">
-            <img src="https://images.unsplash.com/photo-1540420773420-3366772f4999?auto=format&fit=crop&w=700&q=80" 
-                 alt="Nutrient-dense Organic Moringa Drumstick" class="prod-photo" loading="lazy" />
+          <a href="product-detail.html?id=moringa" class="prod-img-wrap" aria-label="View Moringa profile">
+            <img src="images/moringa.jpg" alt="Nutrient-dense Organic Moringa Drumstick" class="prod-photo" loading="lazy" />
             <div class="prod-badges">
               <span class="pbadge superfood"><i class="fa-solid fa-bolt"></i> Superfood</span>
               <span class="pbadge medicinal"><i class="fa-solid fa-heart-pulse"></i> Medicinal</span>
             </div>
-          </div>
+          </a>
           <div class="prod-body">
-            <h2 class="prod-name">Drumstick (Moringa / Sahjan)</h2>
+            <h2 class="prod-name"><a href="product-detail.html?id=moringa">Drumstick (Moringa / Sahjan)</a></h2>
             <p class="prod-desc">
               One of nature's most concentrated superfoods. Exceptionally dense in bioavailable calcium, amino acids, iron, and anti-inflammatory nutrients.
             </p>
@@ -275,7 +272,7 @@
                  class="prod-wa-btn" target="_blank" rel="noopener" id="order-moringa">
                 <i class="fa-brands fa-whatsapp"></i> Order Now
               </a>
-              <a href="tel:+918320852144" class="prod-call-btn" aria-label="Call to order Moringa"><i class="fa-solid fa-phone"></i></a>
+              <a href="product-detail.html?id=moringa" class="prod-call-btn" title="View Full Profile"><i class="fa-solid fa-circle-info"></i></a>
             </div>
           </div>
         </article>
@@ -283,8 +280,7 @@
         <!-- 5. BRINJAL -->
         <article class="prod-card" id="brinjal" data-category="daily" aria-label="Brinjal Baingan">
           <div class="prod-img-wrap">
-            <img src="https://images.unsplash.com/photo-1563865436874-9aef32095fad?auto=format&fit=crop&w=700&q=80" 
-                 alt="Fresh Organic Brinjal Baingan" class="prod-photo" loading="lazy" />
+            <img src="images/brinjal.jpg" alt="Fresh Organic Brinjal Baingan" class="prod-photo" loading="lazy" />
             <div class="prod-badges">
               <span class="pbadge daily"><i class="fa-solid fa-calendar-check"></i> Fresh Pick</span>
             </div>
@@ -312,8 +308,7 @@
         <!-- 6. TOMATOES -->
         <article class="prod-card" id="tomato" data-category="daily superfood" aria-label="Tomatoes">
           <div class="prod-img-wrap">
-            <img src="https://images.unsplash.com/photo-1592924357228-91a4daadcfea?auto=format&fit=crop&w=700&q=80" 
-                 alt="Vine-ripened Organic Tomatoes" class="prod-photo" loading="lazy" />
+            <img src="images/tomato.jpg" alt="Vine-ripened Organic Tomatoes" class="prod-photo" loading="lazy" />
             <div class="prod-badges">
               <span class="pbadge daily"><i class="fa-solid fa-sun"></i> Vine Ripened</span>
               <span class="pbadge superfood"><i class="fa-solid fa-bolt"></i> Lycopene</span>
@@ -342,8 +337,7 @@
         <!-- 7. METHI -->
         <article class="prod-card" id="methi" data-category="leafy medicinal" aria-label="Fenugreek Methi">
           <div class="prod-img-wrap">
-            <img src="https://images.unsplash.com/photo-1540420773420-3366772f4999?auto=format&fit=crop&w=700&q=80" 
-                 alt="Organic Fenugreek Methi leaves" class="prod-photo" loading="lazy" />
+            <img src="images/methi.jpg" alt="Organic Fenugreek Methi leaves" class="prod-photo" loading="lazy" />
             <div class="prod-badges">
               <span class="pbadge leafy"><i class="fa-solid fa-leaf"></i> Leafy Herb</span>
               <span class="pbadge medicinal"><i class="fa-solid fa-heart-pulse"></i> Medicinal</span>
@@ -372,8 +366,7 @@
         <!-- 8. LAUKI -->
         <article class="prod-card" id="lauki" data-category="daily medicinal" aria-label="Bottle Gourd Lauki Doodhi">
           <div class="prod-img-wrap">
-            <img src="https://images.unsplash.com/photo-1598170845058-32b9d6a5c317?auto=format&fit=crop&w=700&q=80" 
-                 alt="Organic Bottle Gourd Lauki Doodhi" class="prod-photo" loading="lazy" />
+            <img src="images/lauki.jpg" alt="Organic Bottle Gourd Lauki Doodhi" class="prod-photo" loading="lazy" />
             <div class="prod-badges">
               <span class="pbadge daily"><i class="fa-solid fa-droplet"></i> Cooling</span>
               <span class="pbadge medicinal"><i class="fa-solid fa-heart-pulse"></i> Digestive</span>
@@ -402,8 +395,7 @@
         <!-- 9. GUAR -->
         <article class="prod-card" id="guar" data-category="daily" aria-label="Cluster Beans Guar">
           <div class="prod-img-wrap">
-            <img src="https://images.unsplash.com/photo-1557844352-761f2565b576?auto=format&fit=crop&w=700&q=80" 
-                 alt="Tender Organic Cluster Beans Guar" class="prod-photo" loading="lazy" />
+            <img src="images/guar.jpg" alt="Tender Organic Cluster Beans Guar" class="prod-photo" loading="lazy" />
             <div class="prod-badges">
               <span class="pbadge daily"><i class="fa-solid fa-calendar-check"></i> Fresh Pick</span>
             </div>
@@ -431,8 +423,7 @@
         <!-- 10. GREEN CHILLI -->
         <article class="prod-card" id="chilli" data-category="daily" aria-label="Green Chilli">
           <div class="prod-img-wrap">
-            <img src="https://images.unsplash.com/photo-1588252303782-cb80119abd6d?auto=format&fit=crop&w=700&q=80" 
-                 alt="Crisp Organic Green Chilli" class="prod-photo" loading="lazy" />
+            <img src="images/green_chilli.jpg" alt="Crisp Organic Green Chilli" class="prod-photo" loading="lazy" />
             <div class="prod-badges">
               <span class="pbadge daily"><i class="fa-solid fa-fire"></i> Fresh Spice</span>
             </div>
@@ -460,8 +451,7 @@
         <!-- 11. CORIANDER -->
         <article class="prod-card" id="coriander" data-category="leafy daily" aria-label="Coriander Dhania">
           <div class="prod-img-wrap">
-            <img src="https://images.unsplash.com/photo-1599940824399-b87987ceb72a?auto=format&fit=crop&w=700&q=80" 
-                 alt="Organic Coriander Dhania leaves" class="prod-photo" loading="lazy" />
+            <img src="images/coriander.jpg" alt="Organic Coriander Dhania leaves" class="prod-photo" loading="lazy" />
             <div class="prod-badges">
               <span class="pbadge leafy"><i class="fa-solid fa-leaf"></i> Fresh Herb</span>
               <span class="pbadge daily"><i class="fa-solid fa-calendar-check"></i> Daily</span>
@@ -490,8 +480,7 @@
         <!-- 12. CURRY LEAVES -->
         <article class="prod-card" id="curry" data-category="leafy medicinal" aria-label="Curry Leaves Kadi Patta">
           <div class="prod-img-wrap">
-            <img src="https://images.unsplash.com/photo-1509358271058-acd22cc93898?auto=format&fit=crop&w=700&q=80" 
-                 alt="Fresh Organic Curry Leaves Kadi Patta" class="prod-photo" loading="lazy" />
+            <img src="images/curry_leaves.jpg" alt="Fresh Organic Curry Leaves Kadi Patta" class="prod-photo" loading="lazy" />
             <div class="prod-badges">
               <span class="pbadge leafy"><i class="fa-solid fa-leaf"></i> Fresh Leaves</span>
               <span class="pbadge medicinal"><i class="fa-solid fa-heart-pulse"></i> Medicinal</span>
@@ -565,10 +554,10 @@
           <div class="footer-col">
             <h5>All Vegetables</h5>
             <ul>
-              <li><a href="#spinach">Spinach (Palak)</a></li>
-              <li><a href="#karela">Bitter Gourd (Karela)</a></li>
+              <li><a href="product-detail.html?id=spinach">Spinach (Palak)</a></li>
+              <li><a href="product-detail.html?id=karela">Bitter Gourd (Karela)</a></li>
               <li><a href="#bhindi">Okra (Bhindi)</a></li>
-              <li><a href="#moringa">Moringa Drumstick</a></li>
+              <li><a href="product-detail.html?id=moringa">Moringa Drumstick</a></li>
               <li><a href="#tomato">Vine Tomatoes</a></li>
               <li><a href="#methi">Fenugreek (Methi)</a></li>
               <li><a href="#lauki">Bottle Gourd (Lauki)</a></li>
@@ -581,8 +570,8 @@
               <li><a href="index.html">Home</a></li>
               <li><a href="fruits.html">Organic Fruits</a></li>
               <li><a href="vegetables.html">Organic Vegetables</a></li>
-              <li><a href="index.html#about">Our Story</a></li>
-              <li><a href="index.html#contact">Contact &amp; Directions</a></li>
+              <li><a href="about.html">Our Story</a></li>
+              <li><a href="contact.html">Contact &amp; Directions</a></li>
             </ul>
           </div>
           <div class="footer-col">
@@ -606,6 +595,7 @@
 
   <!-- ══ SCRIPTS ══ -->
   <script src="js/shared.js"></script>
+  <script src="js/chatbot.js"></script>
   <script src="js/products.js"></script>
 </body>
 </html>
